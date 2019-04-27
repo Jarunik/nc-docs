@@ -1,6 +1,6 @@
 # API
 
-Currently available REST API's to get data from the NextColony Backend Server.
+List of available REST API's to get data from the NextColony backend server.
 
 ## loadqyt
 
@@ -205,7 +205,7 @@ Load the planets.
 
 | Field   |             Description             |
 | :------ | :---------------------------------: |
-| starter | 1 = Starter Planet, 0 = Non-Starter |
+| starter | 1 = starter planet, 0 = no starter planet |
 
 ### Examples
 
@@ -275,8 +275,8 @@ Load the resource production of a planet.
 
 | Name |  Type  | Description        |      Required      |
 | :--- | :----: | :----------------- | :----------------: |
-| id   | string | UID of the planet. | :white_check_mark: |
-| user | string | Steem User         | :white_check_mark: |
+| id   | string | UID of the planet | :white_check_mark: |
+| user | string | Steem user         | :white_check_mark: |
 
 ### Types
 
@@ -403,7 +403,7 @@ Load item transfers
 
 | Name |  Type  | Description |      Required      |
 | :--- | :----: | :---------- | :----------------: |
-| user | string | Steem User  | :white_check_mark: |
+| user | string | Steem user  | :white_check_mark: |
 
 ### Types
 
@@ -596,7 +596,7 @@ Load all ships of a planet.
 
 | Name     |  Type  | Description       |      Required      |
 | :------- | :----: | :---------------- | :----------------: |
-| user     | string | Steem User        | :white_check_mark: |
+| user     | string | Steem user        | :white_check_mark: |
 | planetid | string | UID of the planet | :white_check_mark: |
 
 ### Types
@@ -704,7 +704,7 @@ Load information about the items of a user.
 
 | Name |  Type  | Description |      Required      |
 | :--- | :----: | :---------- | :----------------: |
-| user | string | Steem User  | :white_check_mark: |
+| user | string | Steem user  | :white_check_mark: |
 
 ### Types
 
@@ -781,7 +781,7 @@ Get all the fleets missions of a user.
 
 | Name     |  Type  | Description       |      Required      |
 | :------- | :----: | :---------------- | :----------------: |
-| user     | string | Steem User        | :white_check_mark: |
+| user     | string | Steem user        | :white_check_mark: |
 | planetid | string | UID of the planet | :white_check_mark: |
 
 ### Types
