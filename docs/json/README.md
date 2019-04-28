@@ -157,7 +157,7 @@ Gifts an item to another player.
 This custom_json will move ships to a new planet and changes the ownership of the ships to the owner of the planet on which the ships have arrived. It is possible to transport resources to the coordinates.
 
 ```json
-{"username":"holger80","type":"deploy","command":{"tr_var1":{"transportship": 2, "explorership":1} ,"tr_var2": 131, "tr_var3": -123, "tr_var4": 0, "tr_var5": 0, "tr_var6": 0, "tr_var7": 0 "tr_var8": "P-Z5CNNNZTL40 "}}
+{"username":"holger80","type":"deploy","command":{"tr_var1":{"transportship": 2, "explorership":1} ,"tr_var2": 131, "tr_var3": -123, "tr_var4": 0, "tr_var5": 0, "tr_var6": 0, "tr_var7": 0, "tr_var8":"P-Z5CNNNZTL40 "}}
 ```
 
 - `tr_var1`: List of ships, either with ships name and quantity `{"transportship": 2, "explorership":1}` or max 25 UIDs `"S-ZKZHNR9O31C;S-ZRUVBR6EXGW"`
