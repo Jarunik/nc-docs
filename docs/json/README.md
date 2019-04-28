@@ -10,7 +10,9 @@ A custom_json command consists of an id and a json field. All commands in nextco
 
 and the json field has the following structure:
 
-```{"username":"holger80","type":"newuser","command":{"tr_var1":"holger80"}}```
+```json
+{"username":"holger80","type":"newuser","command":{"tr_var1":"holger80"}}
+```
 
 where `username` is the username (currently not used and can be skipped).
 type defines the command `type` and `command` consists of a dict with the keys `tr_var1` to `tr_var8`.
@@ -18,7 +20,9 @@ The command is applied to the user defined in the `required_posting_auths` field
 
 ## newuser
 
-```{"username":"holger80","type":"newuser","command":{"tr_var1":"holger80"}}```
+```json
+{"username":"holger80","type":"newuser","command":{"tr_var1":"holger80"}}
+```
 
 Creates a new game account with the steem account name.
 The command uses one field:
@@ -27,7 +31,9 @@ The command uses one field:
 
 ## enhance
 
-```{"username":"holger80","type":"enhance","command":{"tr_var1":"holger80","tr_var2":"P-ZN2FTQ9F3W0","tr_var3":"coalmine"}}```
+```json
+{"username":"holger80","type":"enhance","command":{"tr_var1":"holger80","tr_var2":"P-ZN2FTQ9F3W0","tr_var3":"coalmine"}}
+```
 
 Starts learning of a skill which is necessary for building a higher level or being able to build ships.
 
@@ -47,15 +53,21 @@ Skill names are:
 
 ### booster
 
-```coalbooster, orebooster, copperbooster, uraniumbooster, missioncontrol```
+```coalbooster, orebooster, copperbooster, uraniumbooster```
 
 ### ships
 
 ```Explorer, Transporter, Corvette, Frigate, Destroyer, Cruiser, Battlecruiser, Carrier, Dreadnought```
 
+### commander
+
+```missioncontrol```
+
 ## upgrade
 
-```{"username":"holger80","type":"upgrade","command":{"tr_var1":"P-ZN2FTQ9F3W0","tr_var2":"researchcenter"}}```
+```json
+{"username":"holger80","type":"upgrade","command":{"tr_var1":"P-ZN2FTQ9F3W0","tr_var2":"researchcenter"}}
+```
 
 ### depots and mines
 
@@ -67,7 +79,9 @@ Skill names are:
 
 ## buildship
 
-```{"username":"holger80","type":"buildship","command":{"tr_var1":"P-ZN2FTQ9F3W0","tr_var2":"explorership"}}```
+```json
+{"username":"holger80","type":"buildship","command":{"tr_var1":"P-ZN2FTQ9F3W0","tr_var2":"explorership"}}
+```
 
 Builds one ship when the conditions (resources, no other ship is build, shipyard level and ship skill level) are met.
 
@@ -80,7 +94,9 @@ Possible ship names are:
 
 ## explorespace
 
-```{"username":"holger80","type":"explorespace","command":{"tr_var1":"P-ZN2FTQ9F3W0","tr_var2":53,"tr_var3":-317}}```
+```json
+{"username":"holger80","type":"explorespace","command":{"tr_var1":"P-ZN2FTQ9F3W0","tr_var2":53,"tr_var3":-317}}
+```
 
 Starts a exploration mission, a explorer must be available and ready on the planet.
 
@@ -90,7 +106,9 @@ Starts a exploration mission, a explorer must be available and ready on the plan
 
 ## transport
 
-```{"username":"holger80","type":"transport","command":{"tr_var1":2,"tr_var2":"P-ZN2FTQ9F3W0","tr_var3":"52","tr_var4":"-321","tr_var5":15,"tr_var6":15,"tr_var7":15,"tr_var8":15}}```
+```json
+{"username":"holger80","type":"transport","command":{"tr_var1":2,"tr_var2":"P-ZN2FTQ9F3W0","tr_var3":"52","tr_var4":"-321","tr_var5":15,"tr_var6":15,"tr_var7":15,"tr_var8":15}}
+```
 
 Transports resources to a location and returns to the start position afterwards.
 
@@ -105,7 +123,9 @@ Transports resources to a location and returns to the start position afterwards.
 
 ## activate
 
-```{"username":"holger80","type":"activate","command":{"tr_var1":"C3-ZSQFKQ5LW9S","tr_var2":"P-ZN2FTQ9F3W0"}}```
+```json
+{"username":"holger80","type":"activate","command":{"tr_var1":"C3-ZSQFKQ5LW9S","tr_var2":"P-ZN2FTQ9F3W0"}}
+```
 
 Activates an item, the effect depends on the item.
 
@@ -114,7 +134,9 @@ Activates an item, the effect depends on the item.
 
 ## giftitem
 
-```{"username":"holger80","type":"giftitem","command":{"tr_var1":"C3-ZUA1B4B7UPS","tr_var2":"holger.random"}}```
+```json
+{"username":"holger80","type":"giftitem","command":{"tr_var1":"C3-ZUA1B4B7UPS","tr_var2":"holger.random"}}
+```
 
 Gifts an item to another player.
 
@@ -123,29 +145,48 @@ Gifts an item to another player.
 
 ## giftplanet
 
-```{"username": "urachem", "type": "giftplanet", "command": {"tr_var1": "1003", "tr_var2": "dachcolony"}}```
+```json
+{"username": "urachem", "type": "giftplanet", "command": {"tr_var1": "1003", "tr_var2": "dachcolony"}}
+```
 
 - `tr_var1`: planet id of the planet that should be gifted
 - `tr_var2`: username will receive the planet and will be the new owner
 
 ## deploy
 
-This custom_json will move a fleet of up to 25 ships to a new planet and changes the ownership of the ships to the owner of the planet on which the ships have arrived. It is possible to transport resources to the coordinates.
+This custom_json will move ships to a new planet and changes the ownership of the ships to the owner of the planet on which the ships have arrived. It is possible to transport resources to the coordinates.
 
-```{"username":"holger80","type":"deploy","command":{"tr_var1":"S-ZKZHNR9O31C;S-ZRUVBR6EXGW","tr_var2":"-265","tr_var3":"-38","tr_var4":"0","tr_var5":"0","tr_var6":"0","tr_var7":"100"}}```
+```json
+{"username":"holger80","type":"deploy","command":{"tr_var1":{"transportship": 2, "explorership":1} ,"tr_var2": 131, "tr_var3": -123, "tr_var4": 0, "tr_var5": 0, "tr_var6": 0, "tr_var7": 0 "tr_var8": "P-Z5CNNNZTL40 "}}
+```
+
+- `tr_var1`: List of ships, either with ships name and quantity `{"transportship": 2, "explorership":1}` or max 25 UIDs `"S-ZKZHNR9O31C;S-ZRUVBR6EXGW"`
+- `tr_var2`: X Destination Coordinates
+- `tr_var3`: Y Destination Coordinates
+- `tr_var4`: Coal Quantity
+- `tr_var5`: Ore Quantity
+- `tr_var6`: Copper Quantity
+- `tr_var7`: Uranium Quantity
+- `tr_var8`: Source Planet UID
 
 The arrival time is determined by the slowest ship. The ownership is changed when the ships have arrived on the destination.
 
+
+
 ## renameplanet
 
-```{"username":"holger80","type":"renameplanet","command":{"tr_var1":"P-Z8MVHPCCL80","tr_var2":"My Great Planet"}}```
+```json
+{"username":"holger80","type":"renameplanet","command":{"tr_var1":"P-Z8MVHPCCL80","tr_var2":"My Great Planet"}}
+```
 
 - `tr_var1`: planet uid, must be owned by the user
 - `tr_var2`: new name for the planet (allowed characters: `# . _ - a-z A-Z 0-ß`)
 
 ## updateshop
 
-```{"type": "updateshop", "command": {"tr_var1": "chest_01", "tr_var2": "sales_per_day", "tr_var3": "100"}}```
+```json
+{"type": "updateshop", "command": {"tr_var1": "chest_01", "tr_var2": "sales_per_day", "tr_var3": "100"}}
+```
 
 - `tr_var1`: Item ID
 - `tr_var2`: Parameter to adapt: `sales_per_day`, `max_supply`, `price`, `coal`, `ore`,  `copper`, `uranium`, `name` 
