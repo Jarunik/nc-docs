@@ -8,12 +8,13 @@ As you may know, I'm part of the team working on [NextColony](https://nexctcolon
 
 In order to allow replay and to have random events, the steem blocks itself will be used to generate a seed for the random generator. Every uid for planets, items, ships and missions will be generated from random numbers that have been seeded by the transaction id of the broadcasted transfer/custom_json. Thus, in a replay, the same random numbers will be generated and as the trx-id and other block ids are not predictable, random events and generated uids are not predictable.
 
-```import random
+```
+import random
 import base36
 import math
 import hashlib
 
-def gererateSeed(block_trx, block_id, previous_id):
+def generateSeed(block_trx, block_id, previous_id):
     seed = hashlib.md5((trx_id + block_id + previous_id).encode()).hexdigest()
     return seed
 
@@ -41,11 +42,12 @@ The trx-id for the purchase is `e8d4bf45ba82b16c75fb777d90f2520089bfa5aa` and th
 
 The prefix of the Huge Chest is C2.
 
-```from beem.block import Block
+```
+from beem.block import Block
 block = Block(32060228)
 trx_id = "e8d4bf45ba82b16c75fb777d90f2520089bfa5aa"
 prefix = "C2-"
-seed = gererateSeed(trx_id, block["block_id"], block["previous"])
+seed = generateSeed(trx_id, block["block_id"], block["previous"])
 set_seed(seed)
 uid_item = uid_from_seed(prefix)
 print(uid_item)
