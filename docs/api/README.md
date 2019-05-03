@@ -2,6 +2,13 @@
 
 List of available REST API's to get data from the NextColony backend server.
 
+Some general hints:
+
+- Timestamps and Times are usually in seconds
+- Objects can be GET with the UID
+- Users can be GET with the steem user (as lowercase string)
+- We do rate limit the API. You will get an error response with code 429 if you reached your limit.
+
 ## loadqyt
 
 Load the resource quantities of a planet.
@@ -20,7 +27,7 @@ Load the resource quantities of a planet.
 
 | Field      |                                     Description                                     |
 | :--------- | :---------------------------------------------------------------------------------: |
-| lastUpdate | Timestamp of the last update of the entry in seconds, `new Date(LastUpdate * 1000)` |
+| lastUpdate | Timestamp in seconds of the last update of the entry, `new Date(LastUpdate * 1000)` |
 
 ### Examples
 
@@ -64,7 +71,7 @@ Load the building information of a planet.
 
 | Field |                             Description                             |
 | :---- | :-----------------------------------------------------------------: |
-| busy  | Timestamp when the next action is possible, `new Date(busy * 1000)` |
+| busy  | Timestamp in seconds when the next action is possible, `new Date(busy * 1000)` |
 | time  |                  Seconds needed to do the upgrade                   |
 
 ### Examples
@@ -141,7 +148,7 @@ Load the skills of a user.
 
 | Field |                             Description                             |
 | :---- | :-----------------------------------------------------------------: |
-| busy  | Timestamp when the next action is possible, `new Date(busy * 1000)` |
+| busy  | Timestamp in seconds when the next action is possible, `new Date(busy * 1000)` |
 | time  |                Seconds needed to do the enhancement                 |
 
 ### Examples
@@ -409,7 +416,7 @@ Load item transfers
 
 | Field |        Description        |
 | :---- | :-----------------------: |
-| time  | Timestamp of the transfer |
+| time  | Timestamp of the transfer in milliseconds |
 
 ### Examples
 
@@ -603,9 +610,8 @@ Load all ships of a planet.
 
 | Field      |                             Description                             |
 | :--------- | :-----------------------------------------------------------------: |
-| busy       | Timestamp when the next action is possible, `new Date(busy * 1000)` |
-| time       |                Seconds needed to do the enhancement                 |
-| lastupdate |              Timestamp when the table was last updated              |
+| busy       | Timestamp in seconds when the next action is possible |
+| lastupdate |              Timestamp in seconds when the table was last updated              |
 
 ### Examples
 
@@ -906,4 +912,34 @@ curl https://nextcolony.io/api/loadplanet?id=P-Z8MVHPCCL80
   "total_type": 1,
   "user": "holger80"
 }
+```
+
+## loaduser
+
+Get the registration date of a user. It can also be used to check existence of a user.
+
+### Endpoint
+
+`GET /api/loaduser`
+
+### Query Parameters
+
+| Name     |  Type  | Description       |      Required      |
+| :------- | :----: | :---------------- | :----------------: |
+| user | string | Steem user | :white_check_mark: |
+
+### Types
+
+| Field      |                             Description                             |
+| :--------- | :-----------------------------------------------------------------: |
+| date       | Timestamp of registration in seconds. |
+
+### Examples
+
+```sh
+curl https://nextcolony.io/api/loaduser?user=jarunik
+```
+
+```json
+{"date":1555879062,"username":"jarunik"}
 ```
