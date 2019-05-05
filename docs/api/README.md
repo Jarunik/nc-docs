@@ -924,3 +924,35 @@ curl https://nextcolony.io/api/loaduser?user=jarunik
 ```json
 { "date": 1555879062, "username": "jarunik" }
 ```
+
+## loadtransaction
+
+Load the transactions that the backend loaded and processed from the steem blocckhain.
+
+This endpoint is mostly for debugging purposes. The content is according to the [NextColony JSON definitions](../json/README.md).
+
+### Endpoint
+
+`GET /api/loadtransaction`
+
+### Query Parameters
+
+| Name |  Type  | Description |      Required      |
+| :--- | :----: | :---------- | :----------------: |
+| trx_id | string | Steem transaction id  | :white_check_mark: |
+
+### Types
+
+| Field |              Description              |
+| :---- | :-----------------------------------: |
+| date  | Timestamp of transaction in seconds. |
+
+### Examples
+
+```sh
+curl https://nextcolony.io/api/loadtransaction?trx_id=9874df43329b9a406cdff8e7f6a0a7dd4f9db506
+```
+
+```json
+{"block_num":32636434,"date":1557045444,"error":null,"id":145586,"tr_status":1,"tr_type":"explorespace","tr_var1":"P-Z8MVHPCCL80","tr_var2":"-270","tr_var3":"-39","tr_var4":"0","tr_var5":"0","tr_var6":"0","tr_var7":"0","tr_var8":"0","trigger_block_num":null,"trx":"9874df43329b9a406cdff8e7f6a0a7dd4f9db506","user":"holger80","virtualop":0}
+```
