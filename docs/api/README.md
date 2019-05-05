@@ -2,6 +2,13 @@
 
 List of available REST API's to get data from the NextColony backend server.
 
+Some general hints:
+
+- Timestamps and Times are usually in seconds
+- Objects can be GET with the UID
+- Users can be GET with the steem user (as lowercase string)
+- We do rate limit the API. You will get an error response with code 429 if you reached your limit.
+
 ## loadqyt
 
 Load the resource quantities of a planet.
@@ -20,7 +27,7 @@ Load the resource quantities of a planet.
 
 | Field      |                                     Description                                     |
 | :--------- | :---------------------------------------------------------------------------------: |
-| lastUpdate | Timestamp of the last update of the entry in seconds, `new Date(LastUpdate * 1000)` |
+| lastUpdate | Timestamp in seconds of the last update of the entry, `new Date(LastUpdate * 1000)` |
 
 ### Examples
 
@@ -62,10 +69,10 @@ Load the building information of a planet.
 
 ### Types
 
-| Field |                             Description                             |
-| :---- | :-----------------------------------------------------------------: |
-| busy  | Timestamp when the next action is possible, `new Date(busy * 1000)` |
-| time  |                  Seconds needed to do the upgrade                   |
+| Field |                                  Description                                   |
+| :---- | :----------------------------------------------------------------------------: |
+| busy  | Timestamp in seconds when the next action is possible, `new Date(busy * 1000)` |
+| time  |                        Seconds needed to do the upgrade                        |
 
 ### Examples
 
@@ -139,10 +146,10 @@ Load the skills of a user.
 
 ### Types
 
-| Field |                             Description                             |
-| :---- | :-----------------------------------------------------------------: |
-| busy  | Timestamp when the next action is possible, `new Date(busy * 1000)` |
-| time  |                Seconds needed to do the enhancement                 |
+| Field |                                  Description                                   |
+| :---- | :----------------------------------------------------------------------------: |
+| busy  | Timestamp in seconds when the next action is possible, `new Date(busy * 1000)` |
+| time  |                      Seconds needed to do the enhancement                      |
 
 ### Examples
 
@@ -203,8 +210,8 @@ Load the planets.
 
 ### Types
 
-| Field   |             Description             |
-| :------ | :---------------------------------: |
+| Field   |                Description                |
+| :------ | :---------------------------------------: |
 | starter | 1 = starter planet, 0 = no starter planet |
 
 ### Examples
@@ -230,37 +237,18 @@ curl https://nextcolony.io/api/loadplanets?from=0&to=11
 ```
 
 ```json
-[
-  { "id": "1", "name": "Earth", "posx": 0, "posy": 0, "starter": 1 },
-  { "id": "1000", "name": "Venus XII", "posx": 219, "posy": 13, "starter": 1 },
-  { "id": "1001", "name": "Delta", "posx": -271, "posy": 20, "starter": 1 },
-  {
-    "id": "1002",
-    "name": "Prometheus",
-    "posx": 184,
-    "posy": -176,
-    "starter": 1
-  },
-  { "id": "1003", "name": "Tartaros", "posx": 237, "posy": 123, "starter": 0 },
-  { "id": "1004", "name": "Zyklop", "posx": 91, "posy": 268, "starter": 1 },
-  {
-    "id": "1005",
-    "name": "Lightsaber",
-    "posx": 85,
-    "posy": -235,
-    "starter": 1
-  },
-  { "id": "1006", "name": "Drakon", "posx": -160, "posy": 224, "starter": 1 },
-  { "id": "1007", "name": "Tellus", "posx": -248, "posy": -184, "starter": 1 },
-  { "id": "1008", "name": "Omega", "posx": -11, "posy": 257, "starter": 1 },
-  {
-    "id": "P-Z04R02TY3WW",
-    "name": "Alpha",
-    "posx": -247,
-    "posy": 223,
-    "starter": 1
-  }
-]
+{
+  "misc": { "total": 1312 },
+  "planets": [
+    {
+      "id": "P-Z5CNNNZTL40",
+      "name": "Test",
+      "posx": 294,
+      "posy": -193,
+      "starter": 1
+    }
+  ]
+}
 ```
 
 ## loadproduction
@@ -273,10 +261,10 @@ Load the resource production of a planet.
 
 ### Query Parameters
 
-| Name |  Type  | Description        |      Required      |
-| :--- | :----: | :----------------- | :----------------: |
+| Name |  Type  | Description       |      Required      |
+| :--- | :----: | :---------------- | :----------------: |
 | id   | string | UID of the planet | :white_check_mark: |
-| user | string | Steem user         | :white_check_mark: |
+| user | string | Steem user        | :white_check_mark: |
 
 ### Types
 
@@ -407,9 +395,9 @@ Load item transfers
 
 ### Types
 
-| Field |        Description        |
-| :---- | :-----------------------: |
-| time  | Timestamp of the transfer |
+| Field |                Description                |
+| :---- | :---------------------------------------: |
+| time  | Timestamp of the transfer in milliseconds |
 
 ### Examples
 
@@ -601,11 +589,10 @@ Load all ships of a planet.
 
 ### Types
 
-| Field      |                             Description                             |
-| :--------- | :-----------------------------------------------------------------: |
-| busy       | Timestamp when the next action is possible, `new Date(busy * 1000)` |
-| time       |                Seconds needed to do the enhancement                 |
-| lastupdate |              Timestamp when the table was last updated              |
+| Field      |                      Description                      |
+| :--------- | :---------------------------------------------------: |
+| busy       | Timestamp in seconds when the next action is possible |
+| lastupdate | Timestamp in seconds when the table was last updated  |
 
 ### Examples
 
@@ -906,4 +893,34 @@ curl https://nextcolony.io/api/loadplanet?id=P-Z8MVHPCCL80
   "total_type": 1,
   "user": "holger80"
 }
+```
+
+## loaduser
+
+Get the registration date of a user. It can also be used to check existence of a user.
+
+### Endpoint
+
+`GET /api/loaduser`
+
+### Query Parameters
+
+| Name |  Type  | Description |      Required      |
+| :--- | :----: | :---------- | :----------------: |
+| user | string | Steem user  | :white_check_mark: |
+
+### Types
+
+| Field |              Description              |
+| :---- | :-----------------------------------: |
+| date  | Timestamp of registration in seconds. |
+
+### Examples
+
+```sh
+curl https://nextcolony.io/api/loaduser?user=jarunik
+```
+
+```json
+{ "date": 1555879062, "username": "jarunik" }
 ```
