@@ -53,7 +53,7 @@ Skill names are:
 
 ### booster
 
-```coalbooster, orebooster, copperbooster, uraniumbooster```
+```coalbooster, orebooster, copperbooster, uraniumbooster, bunker, shieldgenerator```
 
 ### ships
 
@@ -75,7 +75,7 @@ Skill names are:
 
 ### special buildings
 
-```shipyard,  base, researchcenter```
+```shipyard,  base, researchcenter, bunker, shieldgenerator```
 
 ## buildship
 
