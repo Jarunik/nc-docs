@@ -75,7 +75,7 @@ Skill names are:
 
 ### special buildings
 
-```shipyard,  base, researchcenter, bunker, shieldgenerator```
+```shipyard,  base, researchcenter, bunker```
 
 ## buildship
 
