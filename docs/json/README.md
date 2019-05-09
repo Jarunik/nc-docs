@@ -49,7 +49,7 @@ Skill names are:
 
 ### special buildings
 
-```base, researchcenter, shipyard, bunker, shieldgenerator```
+```base, researchcenter, shipyard, bunker```
 
 ### booster
 
