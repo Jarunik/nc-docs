@@ -771,6 +771,7 @@ Get all the fleets missions of a user.
 | user     | string | Steem user                                   | :white_check_mark: |
 | planetid | string | UID of the planet                            |        :x:         |
 | active   | number | default 0 = all mission, 1 = active missions |        :x:         |
+| outgoing   | number | default 0 = all mission, 1 = outgoing missions |        :x:         |
 
 ### Types
 
