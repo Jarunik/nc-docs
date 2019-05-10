@@ -49,11 +49,11 @@ Skill names are:
 
 ### special buildings
 
-```base, researchcenter, shipyard```
+```base, researchcenter, shipyard, bunker```
 
 ### booster
 
-```coalbooster, orebooster, copperbooster, uraniumbooster```
+```coalbooster, orebooster, copperbooster, uraniumbooster, enlargebunker```
 
 ### ships
 
@@ -75,7 +75,7 @@ Skill names are:
 
 ### special buildings
 
-```shipyard,  base, researchcenter```
+```shipyard,  base, researchcenter, bunker```
 
 ## buildship
 
