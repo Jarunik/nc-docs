@@ -176,7 +176,7 @@ The arrival time is determined by the slowest ship. The ownership is changed whe
 ## renameplanet
 
 ```json
-{"username":"holger80","type":"renameplanet","command":{"tr_var1":"P-Z8MVHPCCL80","tr_var2":"My Great Planet"}}
+{"username":"holger80","type":"renameplanet","command":{"tr_var1":"P-Z8MVHPCCL80","tr_var2":"MyGreatPlanet"}}
 ```
 
 - `tr_var1`: planet uid, must be owned by the user
