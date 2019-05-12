@@ -90,7 +90,7 @@ Builds one ship when the conditions (resources, no other ship is build, shipyard
 - 
 Possible ship names are:
 
-```explorership,  transportship, corvette, frigate, destroyer, cruiser, battlecruiser, carrier, dreadnought``` 
+```explorership,  transportship, corvette, frigate, destroyer, cruiser, battlecruiser, carrier, dreadnought, corvette1, cruiser1, dreadnought1``` 
 
 ## explorespace
 
@@ -207,6 +207,8 @@ This command is only accepted if sent from one of the admin accounts like `nextc
 - `tr_var3`: Vertical Coordinates
 - `tr_var4`: Start Planet Id
 
+`transportship` should be sent in pos: 8 to increase the capacity of the fleet.
+
 ## cancel
 
 ```json
@@ -224,4 +226,4 @@ This command is only accepted if sent from one of the admin accounts like `nextc
 - `tr_var1`: Ship list
 - `tr_var2`: Horrizontal Coordinates
 - `tr_var3`: Vertical Coordinates
-- `tr_var4`: Destination Planet
+- `tr_var4`: Start Planet
