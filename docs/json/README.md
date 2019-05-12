@@ -1,6 +1,6 @@
 # JSON
 
-You can use [https://app.steemconnect.com/sign}(https://app.steemconnect.com/sign) to try out the NextColony custom JSON's.
+You can use [https://app.steemconnect.com/sign](https://app.steemconnect.com/sign) to try out the NextColony custom JSON's.
 
 ## Format
 
