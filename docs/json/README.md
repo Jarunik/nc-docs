@@ -1,6 +1,6 @@
 # JSON
 
-You can use https://app.steemconnect.com/sign to try out the custom JSON's.
+You can use [https://app.steemconnect.com/sign}(https://app.steemconnect.com/sign) to try out the custom JSON's.
 
 ## Structure
 
@@ -201,10 +201,10 @@ This command is only accepted if sent from one of the admin accounts like `nextc
 ```
 
 - `tr_var1`: Ship List with up to 7 positions which can be occupied by one ship of the same ship class
-  - `pos` is the position in the formation
+  - `pos` is the position in the formation (1-8)
   - `n` is the number of ships in this position
-- `tr_var2`: Horizontal Coordinates
-- `tr_var3`: Vertical Coordinates
+- `tr_var2`: Horizontal Coordinates (X)
+- `tr_var3`: Vertical Coordinates (Y)
 - `tr_var4`: Start Planet Id
 
 `transportship` should be sent in pos: 8 to increase the capacity of the fleet.
