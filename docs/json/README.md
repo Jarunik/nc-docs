@@ -193,3 +193,24 @@ The arrival time is determined by the slowest ship. The ownership is changed whe
 - `tr_var3`: New Amount to set
 
 This command is only accepted if sent from one of the admin accounts like `nextcolony`
+
+## attack
+
+```json
+{"username":"jarunik","type":"attack","command":{"tr_var1":{"corvette":{"pos":1,"n":1}},"tr_var2":"289","tr_var3":"-196","tr_var4":"P-Z5CNNNZTL40"}}
+```
+
+- `tr_var1`: Ship List with up to 7 positions which can be occupied by one ship of the same ship class
+  - `pos` is the position in the formation
+  - `n` is the number of ships in this position
+- `tr_var2`: Horizontal Coordinates
+- `tr_var3`: Vertical Coordinates
+- `tr_var4`: Start Planet Id
+
+## cancel
+
+```json
+	{"username":"jarunik","type":"cancel","command":{"tr_var1":"M-ZYM57GS3GMO"}}
+```
+
+- `tr_var1`: Mission Id to cancel.
