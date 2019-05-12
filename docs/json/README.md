@@ -214,3 +214,14 @@ This command is only accepted if sent from one of the admin accounts like `nextc
 ```
 
 - `tr_var1`: Mission Id to cancel.
+
+## support
+
+```json
+  {"username": "holger80", "type": "support", "command":{"tr_var1":{"corvette": {"pos": 1, "n": 2},  "transportship": {"pos": 8, "n": 1}},"tr_var2": -269,"tr_var3":-46, "tr_var4": "P-Z8MVHPCCL80" }}
+```
+
+- `tr_var1`: Ship list
+- `tr_var2`: Horrizontal Coordinates
+- `tr_var3`: Vertical Coordinates
+- `tr_var4`: Destination Planet
