@@ -360,22 +360,36 @@ Check for available ships in the shipyard
 ### Examples
 
 ```sh
-curl https://nextcolony.io/api/shipyard?id=P-Z8MVHPCCL80&name=transportship
+curl https://nextcolony.io/api/shipyard?name=explorership&id=P-Z8MVHPCCL80
 ```
 
 ```json
 {
-  "attack": 0,
-  "busy_until": "Wed, 24 Apr 2019 03:19:31 GMT",
-  "capacity": 100,
+  "armor": 1,
+  "bullet": null,
+  "busy_until": 1556904815,
+  "capacity": 0,
+  "class": "Explorer",
   "consumption": 0.002,
-  "cost": { "coal": 538, "copper": 96, "ore": 276, "uranium": 62 },
-  "cur_level": 14,
-  "cur_level_skill": 14,
-  "defense": 3,
-  "min_level": 12,
+  "cost": {
+    "coal": 520,
+    "copper": 65,
+    "ore": 250,
+    "time": 31028,
+    "uranium": 91
+  },
+  "cur_level": 20,
+  "cur_level_skill": 20,
+  "laser": null,
+  "longname": "Explorer",
+  "min_level": 13,
+  "rocket": null,
+  "shield": 0,
   "skill": 20,
-  "speed": 2.0
+  "speed": 1.0,
+  "structure": 0,
+  "variant": 0,
+  "variant_name": null
 }
 ```
 
