@@ -766,12 +766,12 @@ Get all the fleets missions of a user.
 
 ### Query Parameters
 
-| Name     |  Type  | Description                                  |      Required      |
-| :------- | :----: | :------------------------------------------- | :----------------: |
-| user     | string | Steem user                                   | :white_check_mark: |
-| planetid | string | UID of the planet                            |        :x:         |
-| active   | number | default 0 = all mission, 1 = active missions |        :x:         |
-| outgoing   | number | default 0 = all mission, 1 = outgoing missions |        :x:         |
+| Name     |  Type  | Description                                    |      Required      |
+| :------- | :----: | :--------------------------------------------- | :----------------: |
+| user     | string | Steem user                                     | :white_check_mark: |
+| planetid | string | UID of the planet                              |        :x:         |
+| active   | number | default 0 = all mission, 1 = active missions   |        :x:         |
+| outgoing | number | default 0 = all mission, 1 = outgoing missions |        :x:         |
 
 ### Types
 
@@ -854,9 +854,13 @@ Get the information about a specific planet
 
 ### Query Parameters
 
-| Name     |  Type  | Description       |      Required      |
-| :------- | :----: | :---------------- | :----------------: |
-| planetid | string | UID of the planet | :white_check_mark: |
+| Name     |  Type  | Description           | Required |
+| :------- | :----: | :-------------------- | :------: |
+| planetid | string | UID of the planet     |   :x:    |
+| x        | number | Horizontal Coordinate |   :x:    |
+| y        | number | Vertical Coordinate   |   :x:    |
+
+You can either load it by planetid or x/y coordinates.
 
 ### Types
 
