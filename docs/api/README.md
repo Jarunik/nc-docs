@@ -998,7 +998,6 @@ curl https://nextcolony.io/api/loadtransaction?trx_id=9874df43329b9a406cdff8e7f6
 
 Load the results of a battle mission.
 
-
 ### Endpoint
 
 `GET /api/loadbattle`
@@ -1012,9 +1011,10 @@ Load the results of a battle mission.
 
 ### Types
 
-| Field |             Description             |
-| :---- | :---------------------------------: |
-| date  | Timestamp of the battle in seconds. |
+| Field  |             Description             |
+| :----- | :---------------------------------: |
+| date   | Timestamp of the battle in seconds. |
+| result |        2=win, 1=lose, 0=draw        |
 
 ### Examples
 
