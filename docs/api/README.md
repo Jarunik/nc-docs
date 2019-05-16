@@ -993,3 +993,57 @@ curl https://nextcolony.io/api/loadtransaction?trx_id=9874df43329b9a406cdff8e7f6
   "virtualop": 0
 }
 ```
+
+## loadbattle
+
+Load the results of a battle mission.
+
+
+### Endpoint
+
+`GET /api/loadbattle`
+
+### Query Parameters
+
+| Name       |  Type  | Description        |      Required      |
+| :--------- | :----: | :----------------- | :----------------: |
+| user       | string | Steem user         | :white_check_mark: |
+| mission_id | string | Uid of the mission | :white_check_mark: |
+
+### Types
+
+| Field |             Description             |
+| :---- | :---------------------------------: |
+| date  | Timestamp of the battle in seconds. |
+
+### Examples
+
+```sh
+curl https://nextcolony.io/api/loadbattle?user=holger80&mission_id=M-ZGOR8X0KY80
+```
+
+```json
+{
+  "battlecruiser_lost": 0,
+  "carrier_lost": 0,
+  "coal": 0.0,
+  "copper": 0.0,
+  "cords_hor": -158,
+  "cords_ver": -237,
+  "corvette_lost": 0,
+  "cruiser_lost": 0,
+  "date": 1558022103,
+  "destroyer_lost": 0,
+  "dreadnought_lost": 0,
+  "explorership_lost": 0,
+  "frigate_lost": 0,
+  "mission_id": "M-ZGOR8X0KY80",
+  "opponent": "holger.random",
+  "ore": 0.0,
+  "result": 2,
+  "transportship_lost": 0,
+  "trx_id": "dea87f11fea57b51f2c2d687040b3002dfa5352d",
+  "uranium": 260,
+  "user": "holger80"
+}
+```
