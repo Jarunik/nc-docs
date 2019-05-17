@@ -348,8 +348,8 @@ Check for available ships in the shipyard
 
 | Name |  Type  | Description       |      Required      |
 | :--- | :----: | :---------------- | :----------------: |
-| name | string | Name of the ship  | :white_check_mark: |
 | id   | string | UID of the planet | :white_check_mark: |
+| name | string | Name of the ship  |        :x:         |
 
 ### Types
 
@@ -364,33 +364,35 @@ curl https://nextcolony.io/api/shipyard?name=explorership&id=P-Z8MVHPCCL80
 ```
 
 ```json
-{
-  "armor": 1,
-  "bullet": null,
-  "busy_until": 1556904815,
-  "capacity": 0,
-  "class": "Explorer",
-  "consumption": 0.002,
-  "cost": {
-    "coal": 520,
-    "copper": 65,
-    "ore": 250,
-    "time": 31028,
-    "uranium": 91
-  },
-  "cur_level": 20,
-  "cur_level_skill": 20,
-  "laser": null,
-  "longname": "Explorer",
-  "min_level": 13,
-  "rocket": null,
-  "shield": 0,
-  "skill": 20,
-  "speed": 1.0,
-  "structure": 0,
-  "variant": 0,
-  "variant_name": null
-}
+[
+  {
+    "armor": 20,
+    "bullet": 0,
+    "busy_until": 1556454011,
+    "capacity": 100,
+    "class": "Transporter",
+    "consumption": 0.002,
+    "cost": {
+      "coal": 538,
+      "copper": 96,
+      "ore": 276,
+      "time": 25412,
+      "uranium": 62
+    },
+    "cur_level": 20,
+    "cur_level_skill": 20,
+    "laser": 0,
+    "longname": "Transporter",
+    "min_level": 12,
+    "rocket": 0,
+    "shield": 20,
+    "skill": 20,
+    "speed": 2.0,
+    "structure": 80,
+    "variant": 0,
+    "variant_name": "civil"
+  }
+]
 ```
 
 ## loadgift
