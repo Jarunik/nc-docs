@@ -346,10 +346,10 @@ Check for available ships in the shipyard
 
 ### Query Parameters
 
-| Name |  Type  | Description       |      Required      |
-| :--- | :----: | :---------------- | :----------------: |
-| id   | string | UID of the planet | :white_check_mark: |
-| name | string | Name of the ship  |        :x:         |
+| Name |  Type  | Description                                              |      Required      |
+| :--- | :----: | :------------------------------------------------------- | :----------------: |
+| id   | string | UID of the planet                                        | :white_check_mark: |
+| name | string | Deprecated: Name of the ship (returns obsolete response) |        :x:         |
 
 ### Types
 
@@ -393,6 +393,30 @@ curl https://nextcolony.io/api/shipyard?name=explorership&id=P-Z8MVHPCCL80
     "variant_name": "civil"
   }
 ]
+```
+
+#### Deprecated
+
+Please don't use this version and switch to the above without the name parameter.
+
+```sh
+curl https://nextcolony.io/api/shipyard?id=P-Z8MVHPCCL80&name=transportship
+```
+
+```json
+{
+  "attack": 0,
+  "busy_until": "Wed, 24 Apr 2019 03:19:31 GMT",
+  "capacity": 100,
+  "consumption": 0.002,
+  "cost": { "coal": 538, "copper": 96, "ore": 276, "uranium": 62 },
+  "cur_level": 14,
+  "cur_level_skill": 14,
+  "defense": 3,
+  "min_level": 12,
+  "skill": 20,
+  "speed": 2.0
+}
 ```
 
 ## loadgift
