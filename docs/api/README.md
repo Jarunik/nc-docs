@@ -806,12 +806,13 @@ Get all the fleets missions of a user.
 
 ### Query Parameters
 
-| Name     |  Type  | Description                                    |      Required      |
-| :------- | :----: | :--------------------------------------------- | :----------------: |
-| user     | string | Steem user                                     | :white_check_mark: |
-| planetid | string | UID of the planet                              |        :x:         |
-| active   | number | default 0 = all mission, 1 = active missions   |        :x:         |
-| outgoing | number | default 0 = all mission, 1 = outgoing missions |        :x:         |
+| Name     |  Type  | Description                                     |      Required      |
+| :------- | :----: | :---------------------------------------------- | :----------------: |
+| user     | string | Steem user                                      | :white_check_mark: |
+| planetid | string | UID of the planet                               |        :x:         |
+| active   | number | 1 = show only active, 0 = filter out active     |        :x:         |
+| outgoing | number | 1 = show only outgoing, 0 = filter out outgoing |        :x:         |
+| hold     | number | 1 = show only outgoing, 0 = filter out outgoing |        :x:         |
 
 ### Types
 
