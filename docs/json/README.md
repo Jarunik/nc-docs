@@ -89,7 +89,7 @@ Skill names are:
 
 ### Special buildings
 
-`base, researchcenter, shipyard, bunker`
+`base, researchcenter, shipyard, bunker, shieldgenerator`
 
 ### Booster
 
@@ -101,7 +101,7 @@ Skill names are:
 
 ### Commander
 
-`missioncontrol`
+`missioncontrol, structureimprove, armorimprove, shieldimprove, rocketimprove, bulletimprorve, laserimprove, regenerationbonus, repairbonus`
 
 ## upgrade
 
@@ -126,7 +126,7 @@ Upgrades a building.
 
 ### Special buildings
 
-`shipyard, base, researchcenter, bunker`
+`shipyard, base, researchcenter, bunker, shieldgenerator`
 
 ## buildship
 
@@ -366,8 +366,8 @@ Cancel an outgoing mission.
 }
 ```
 
-| Field     | Description                                                            |
-| --------- | ---------------------------------------------------------------------- |
+| Field     | Description            |
+| --------- | ---------------------- |
 | `tr_var1` | Missione uid to cancel |
 
 You can't cancel a mission that is returning from its destination.
@@ -391,9 +391,44 @@ Send a fleet to help protect another planet. They will fight against incoming at
   }
 }
 ```
+
 | Field     | Description                                                            |
 | --------- | ---------------------------------------------------------------------- |
 | `tr_var1` | List of ships, `n`: number of ships, `pos`: position of the ship `1-8` |
 | `tr_var2` | Horizontal Coordinates (X)                                             |
 | `tr_var3` | Vertical Coordinates (Y)                                               |
 | `tr_var4` | Planet uid of origin/start                                             |
+
+## enable
+
+Activate the Shield Generator.
+
+```json
+{
+  "username": "holger80",
+  "type": "enable",
+  "command": { "tr_var1": "P-Z8MVHPCCL80", "tr_var2": "shieldgenerator" }
+}
+```
+
+| Field     | Description   |
+| --------- | ------------- |
+| `tr_var1` | Planet uid    |
+| `tr_var2` | Building Name |
+
+## charge
+
+Charge the Shield generator in order that it can be enabled.
+
+```json
+{
+  "username": "holger80",
+  "type": "charge",
+  "command": { "tr_var1": "P-Z8MVHPCCL80", "tr_var2": "shieldgenerator" }
+}
+```
+
+| Field     | Description   |
+| --------- | ------------- |
+| `tr_var1` | Planet uid    |
+| `tr_var2` | Building Name |
