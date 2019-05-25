@@ -401,7 +401,7 @@ Send a fleet to help protect another planet. They will fight against incoming at
 
 ## enable
 
-Activate the Shield Generator.
+Activate the Shield Generator to protect resources.
 
 ```json
 {
