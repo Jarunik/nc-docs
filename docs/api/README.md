@@ -820,8 +820,6 @@ Get all the fleets missions of a user.
 | :------ | :-------------------------------------------------------------------------------: |
 | arrival |  Timestamp when the ship will arrive at the destination, `new Date(busy * 1000)`  |
 | return  | Timestamp when the ship will return from the destination, `new Date(busy * 1000)` |
-| new     |                              List of active missions                              |
-| old     |                             List of finished missions                             |
 
 ### Examples
 
@@ -830,59 +828,45 @@ curl https://nextcolony.io/api/loadfleetmission?user=holger80&active=1&planetid=
 ```
 
 ```json
-{
-  "new": [
-    {
-      "arrival": 1557401609,
-      "end_x": -265,
-      "end_y": -38,
-      "id": "M-ZSD2M8WLF8G",
-      "resources": { "coal": 0, "copper": 0, "ore": 0, "uranium": 0 },
-      "result": null,
-      "return": 1557414337,
-      "ships": {
-        "battlecruiser": 0,
-        "carrier": 0,
-        "corvette": 0,
-        "cruiser": 0,
-        "destroyer": 0,
-        "dreadnought": 0,
-        "explorership": 0,
-        "frigate": 0,
-        "total": 1,
-        "transportship": 1
-      },
-      "start_x": -272,
-      "start_y": -37,
-      "type": "transport"
+[
+  {
+    "arrival": 1559018412,
+    "cancel_trx": "c3fb41925f8decc58224f2385077bbbdc270e12a",
+    "end_x": 237,
+    "end_y": 123,
+    "from_planet": {
+      "bonus": 1,
+      "name": "Platura",
+      "planet_type": 1,
+      "user": "platuro"
     },
-    {
-      "arrival": 1557399597,
-      "end_x": -269,
-      "end_y": -37,
-      "id": "M-ZZQGSD1R3DS",
-      "resources": { "coal": 0, "copper": 0, "ore": 0, "uranium": 0 },
-      "result": null,
-      "return": 1557410397,
-      "ships": {
-        "battlecruiser": 0,
-        "carrier": 0,
-        "corvette": 0,
-        "cruiser": 0,
-        "destroyer": 0,
-        "dreadnought": 0,
-        "explorership": 1,
-        "frigate": 0,
-        "total": 1,
-        "transportship": 0
-      },
-      "start_x": -272,
-      "start_y": -37,
-      "type": "explorespace"
-    }
-  ],
-  "old": []
-}
+    "id": "M-ZJBSTSF8QGG",
+    "resources": { "coal": 25, "copper": 25, "ore": 25, "uranium": 25 },
+    "result": "cancel",
+    "return": null,
+    "ships": {
+      "battlecruiser": 0,
+      "carrier": 0,
+      "corvette": 0,
+      "cruiser": 0,
+      "destroyer": 0,
+      "dreadnought": 0,
+      "explorership": 0,
+      "frigate": 0,
+      "total": 1,
+      "transportship": 1
+    },
+    "start_x": -157,
+    "start_y": -239,
+    "to_planet": {
+      "bonus": 4,
+      "name": "Tartaros",
+      "planet_type": 5,
+      "user": "platuro"
+    },
+    "type": "transport"
+  }
+]
 ```
 
 ## loadplanet
