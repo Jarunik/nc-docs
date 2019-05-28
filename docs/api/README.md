@@ -77,55 +77,46 @@ Load the building information of a planet.
 ### Examples
 
 ```sh
-curl https://nextcolony.io/api/loadbuildings?id=1005
+curl https://nextcolony.io/api/loadbuildings?id=P-Z5CNNNZTL40
 ```
 
 ```json
 [
   {
     "base": 0,
-    "busy": 1556114383,
-    "coal": 230,
-    "copper": 67,
+    "busy": 1557678603,
+    "coal": 0,
+    "copper": 0,
     "cur_rate": null,
-    "current": 11,
-    "name": "base",
+    "current": 20,
+    "misc": null,
+    "name": "shipyard",
     "next_rate": null,
-    "ore": 161,
+    "ore": 0,
     "research": 0,
-    "skill": 12,
-    "time": 22616,
-    "uranium": 24
+    "skill": 20,
+    "time": 0,
+    "uranium": 0
   },
   {
     "base": 0,
-    "busy": 1556105126,
-    "coal": 250,
-    "copper": 104,
-    "cur_rate": 2880,
-    "current": 12,
-    "name": "coaldepot",
-    "next_rate": 3120,
-    "ore": 300,
+    "busy": 1558897868,
+    "coal": 19,
+    "copper": 5,
+    "cur_rate": null,
+    "current": 1,
+    "misc": {
+      "shieldcharge_busy": 1558966482,
+      "shieldcharged": 1,
+      "shieldprotection_busy": 0
+    },
+    "name": "shieldgenerator",
+    "next_rate": null,
+    "ore": 10,
     "research": 0,
-    "skill": 10,
-    "time": 27614,
-    "uranium": 47
-  },
-  {
-    "base": 0,
-    "busy": 1556105126,
-    "coal": 208,
-    "copper": 104,
-    "cur_rate": 960,
-    "current": 12,
-    "name": "coalmine",
-    "next_rate": 1040,
-    "ore": 349,
-    "research": 0,
-    "skill": 13,
-    "time": 27614,
-    "uranium": 42
+    "skill": 2,
+    "time": 1951,
+    "uranium": 2
   }
 ]
 ```
