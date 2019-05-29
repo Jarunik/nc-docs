@@ -556,7 +556,9 @@ Load shop items
 
 ### Query Parameters
 
-none
+| Name |  Type  | Description                               | Required |
+| :--- | :----: | :---------------------------------------- | :------: |
+| user | string | Steem user, to get activation information |   :x:    |
 
 ### Types
 
@@ -598,6 +600,49 @@ curl https://nextcolony.io/api/loadshop
     "name": "Rune",
     "ore": null,
     "total": 4,
+    "uranium": null
+  }
+]
+```
+
+```sh
+curl https://nextcolony.io/api/loadshop?user=holger80
+```
+
+```json
+[
+  {
+    "activated_planets": [],
+    "blueprint": null,
+    "booster": null,
+    "coal": 8800,
+    "copper": 2200,
+    "cost": 99.0,
+    "id": "chest_03",
+    "imgid": "chest_03",
+    "left": 30,
+    "max_left": null,
+    "max_supply": null,
+    "name": "Imperium Chest",
+    "ore": 4400,
+    "total": 30,
+    "uranium": 1100
+  },
+  {
+    "activated_planets": ["P-Z4QHNR6NBMO", "P-Z8MVHPCCL80"],
+    "blueprint": "corvette1",
+    "booster": null,
+    "coal": null,
+    "copper": null,
+    "cost": 0.001,
+    "id": "blueprint_01",
+    "imgid": "blueprint_01",
+    "left": 3492,
+    "max_left": 3492,
+    "max_supply": 3500,
+    "name": "Corvette Petunia",
+    "ore": null,
+    "total": 3500,
     "uranium": null
   }
 ]
