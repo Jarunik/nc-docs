@@ -351,37 +351,39 @@ Check for available ships in the shipyard
 ### Examples
 
 ```sh
-curl https://nextcolony.io/api/shipyard?name=explorership&id=P-Z8MVHPCCL80
+curl https://nextcolony.io/api/shipyard?id=P-Z8MVHPCCL80
 ```
 
 ```json
 [
   {
+    "activated": false,
     "armor": 20,
     "bullet": 0,
-    "busy_until": 1556454011,
-    "capacity": 100,
-    "class": "Transporter",
-    "consumption": 0.002,
+    "busy_until": null,
+    "capacity": 160,
+    "class": "Battlecruiser",
+    "consumption": 0.0038,
     "cost": {
-      "coal": 538,
-      "copper": 96,
-      "ore": 276,
-      "time": 25412,
-      "uranium": 62
+      "coal": 576,
+      "copper": 144,
+      "ore": 288,
+      "time": 94254.40000000001,
+      "uranium": 72
     },
     "cur_level": 20,
     "cur_level_skill": 20,
     "laser": 0,
-    "longname": "Transporter",
-    "min_level": 12,
-    "rocket": 0,
-    "shield": 20,
+    "longname": "Battlecruiser Tiger",
+    "min_level": 18,
+    "rocket": 8,
+    "shield": 36,
     "skill": 20,
     "speed": 2.0,
-    "structure": 80,
+    "structure": 40,
+    "type": "battlecruiser",
     "variant": 0,
-    "variant_name": "civil"
+    "variant_name": "rocket"
   }
 ]
 ```
@@ -511,37 +513,18 @@ curl https://nextcolony.io/api/loadranking
 ```json
 [
   {
-    "coal": 1125.6,
-    "copper": 281.4,
-    "explorations": 0,
-    "meta_rate": 77.28,
-    "meta_skill": 206,
-    "ore": 562.8,
-    "planets": 1,
-    "uranium": 350.7,
-    "user": "mancer-sm-alt"
-  },
-  {
-    "coal": 1045.2,
-    "copper": 261.3,
-    "explorations": 3,
-    "meta_rate": 71.76,
-    "meta_skill": 198,
-    "ore": 522.6,
-    "planets": 1,
-    "uranium": 325.65,
-    "user": "reggaemuffin"
-  },
-  {
-    "coal": 964.8,
-    "copper": 220.0,
-    "explorations": 0,
-    "meta_rate": 65.12,
-    "meta_skill": 149,
-    "ore": 480.0,
-    "planets": 1,
-    "uranium": 300.6,
-    "user": "xx0xx"
+    "coal": 2284.8,
+    "copper": 530.4,
+    "destroyed_ships": 28,
+    "destroyed_ships_uranium": 5051.25,
+    "explorations": 117,
+    "meta_rate": 110.16,
+    "meta_skill": 472,
+    "ore": 1101.6,
+    "planets": 3,
+    "ships": 98,
+    "uranium": 275.4,
+    "user": "oliverschmid"
   }
 ]
 ```
@@ -571,34 +554,21 @@ curl https://nextcolony.io/api/loadshop
 ```json
 [
   {
+    "activated_planets": [],
+    "blueprint": null,
     "booster": null,
     "coal": 800,
     "copper": 200,
     "cost": 9.99,
     "id": "chest_01",
     "imgid": "chest_01",
-    "left": 100,
+    "left": 150,
     "max_left": null,
     "max_supply": null,
     "name": "Chest",
     "ore": 400,
-    "total": 100,
+    "total": 150,
     "uranium": 100
-  },
-  {
-    "booster": 10.0,
-    "coal": null,
-    "copper": null,
-    "cost": 0.01,
-    "id": "booster_01",
-    "imgid": "booster_01",
-    "left": 4,
-    "max_left": 489,
-    "max_supply": 500,
-    "name": "Rune",
-    "ore": null,
-    "total": 4,
-    "uranium": null
   }
 ]
 ```
@@ -662,21 +632,6 @@ curl https://nextcolony.io/api/loadfleet?user=holger80&planetid=P-Z8MVHPCCL80
     "type": "corvette",
     "uranium": 0.0,
     "ver": -37
-  },
-  {
-    "busy": 1556067120,
-    "capacity": 0.0,
-    "coal": 0.0,
-    "cons": 0.002,
-    "copper": 0.0,
-    "hor": -272,
-    "id": "S-ZM4LG9CYG4W",
-    "lastupdate": 1556134221,
-    "ore": 0.0,
-    "speed": 1.0,
-    "type": "explorership",
-    "uranium": 0.002,
-    "ver": -37
   }
 ]
 ```
@@ -737,6 +692,7 @@ curl https://nextcolony.io/api/loaditems?user=holger.random
 ```json
 [
   {
+    "blueprint": null,
     "booster": 10.0,
     "coal": null,
     "copper": null,
@@ -744,7 +700,7 @@ curl https://nextcolony.io/api/loaditems?user=holger.random
     "imgid": "booster_01",
     "name": "Rune",
     "ore": null,
-    "total": 1,
+    "total": 3,
     "uid": "B1-ZALXR6HPJLC",
     "uranium": null
   }
@@ -778,11 +734,24 @@ curl https://nextcolony.io/api/loadgalaxy?x=0&y=0
 
 ```json
 {
-  "area": { "xmax": 12, "xmin": -11, "ymax": 7, "ymin": -7 },
-  "explore": [],
-  "explored": [],
+  "area": { "xmax": -144, "xmin": -167, "ymax": -231, "ymin": -245 },
+  "explore": [
+    {
+      "date": 1559643780,
+      "type": "explore",
+      "user": "oliverschmid",
+      "x": -157,
+      "y": -236
+    }
+  ],
   "planets": [
-    { "id": "1", "img": "leg_atm_1.png", "type": "planet", "x": 0, "y": 0 }
+    {
+      "id": "P-ZK4X98AY9S0",
+      "img": "co_atm_1.png",
+      "type": "planet",
+      "x": -160,
+      "y": -243
+    }
   ]
 }
 ```
@@ -821,41 +790,60 @@ curl https://nextcolony.io/api/loadfleetmission?user=holger80&active=1&planetid=
 ```json
 [
   {
-    "arrival": 1559018412,
-    "cancel_trx": "c3fb41925f8decc58224f2385077bbbdc270e12a",
-    "end_x": 237,
-    "end_y": 123,
+    "arrival": 1559676543,
+    "battles": 4,
+    "cancel_trx": "e14aa03cbb7eac650763d97f718793bc516843ae",
+    "end_x": -158,
+    "end_y": -238,
     "from_planet": {
-      "bonus": 1,
-      "name": "Platura",
-      "planet_type": 1,
-      "user": "platuro"
+      "bonus": "common",
+      "name": "Alpha",
+      "planet_type": "earth",
+      "user": "holger.random"
     },
-    "id": "M-ZJBSTSF8QGG",
-    "resources": { "coal": 25, "copper": 25, "ore": 25, "uranium": 25 },
-    "result": "cancel",
+    "id": "M-Z1TKX79EUK0",
+    "resources": { "coal": 0, "copper": 0, "ore": 0, "uranium": 0 },
+    "result": "1",
     "return": null,
-    "ships": {
-      "battlecruiser": 0,
-      "carrier": 0,
-      "corvette": 0,
-      "cruiser": 0,
-      "destroyer": 0,
-      "dreadnought": 0,
-      "explorership": 0,
-      "frigate": 0,
-      "total": 1,
-      "transportship": 1
-    },
-    "start_x": -157,
-    "start_y": -239,
+    "ships": { "dreadnought1": 1, "total": 1 },
+    "start_x": -158,
+    "start_y": -237,
     "to_planet": {
-      "bonus": 4,
-      "name": "Tartaros",
-      "planet_type": 5,
-      "user": "platuro"
+      "bonus": "rare",
+      "name": "holger80#1",
+      "planet_type": "ore",
+      "user": "holger80"
     },
-    "type": "transport"
+    "type": "support",
+    "user": "holger.random"
+  },
+  {
+    "arrival": 1559557596,
+    "battles": 2,
+    "cancel_trx": null,
+    "end_x": -158,
+    "end_y": -238,
+    "from_planet": {
+      "bonus": "common",
+      "name": "Alpha",
+      "planet_type": "earth",
+      "user": "holger.random"
+    },
+    "id": "M-ZOTFMBOHUPS",
+    "resources": { "coal": 0, "copper": 0, "ore": 0, "uranium": 0 },
+    "result": "2",
+    "return": null,
+    "ships": { "destroyer": 1, "dreadnought1": 1, "total": 2 },
+    "start_x": -158,
+    "start_y": -237,
+    "to_planet": {
+      "bonus": "rare",
+      "name": "holger80#1",
+      "planet_type": "ore",
+      "user": "holger80"
+    },
+    "type": "attack",
+    "user": "holger.random"
   }
 ]
 ```
@@ -1021,31 +1009,100 @@ Load the results of a battle mission.
 ### Examples
 
 ```sh
-curl https://nextcolony.io/api/loadbattle?user=holger80&mission_id=M-ZGOR8X0KY80
+curl https://nextcolony.io/api/loadbattle?user=jarunik&mission_id=M-Z3P6JP3GGM8
 ```
 
 ```json
-{
-  "battlecruiser_lost": 0,
-  "carrier_lost": 0,
-  "coal": 0.0,
-  "copper": 0.0,
-  "cords_hor": -158,
-  "cords_ver": -237,
-  "corvette_lost": 0,
-  "cruiser_lost": 0,
-  "date": 1558022103,
-  "destroyer_lost": 0,
-  "dreadnought_lost": 0,
-  "explorership_lost": 0,
-  "frigate_lost": 0,
-  "mission_id": "M-ZGOR8X0KY80",
-  "opponent": "holger.random",
-  "ore": 0.0,
-  "result": 2,
-  "transportship_lost": 0,
-  "trx_id": "dea87f11fea57b51f2c2d687040b3002dfa5352d",
-  "uranium": 260,
-  "user": "holger80"
-}
+[
+  {
+    "attacker": "oliverschmid",
+    "attacker_armorrep": 0.12,
+    "attacker_shieldregen": 0.215,
+    "battle_number": 1,
+    "coal": 0.0,
+    "copper": 0.0,
+    "cords_hor": -157,
+    "cords_hor_dest": -156,
+    "cords_ver": -238,
+    "cords_ver_dest": -239,
+    "date": 1559720584,
+    "defender": "rondras",
+    "defender_armorrep": 0.1,
+    "defender_shieldregen": 0.2,
+    "final_attacker_ships": [
+      {
+        "armor": 0,
+        "bullet": 0.0,
+        "class": "Corvette",
+        "laser": 0.0,
+        "longname": "Corvette Crocus",
+        "lost": 1,
+        "n": 1,
+        "pos": "1",
+        "rocket": 0.0,
+        "shield": 0,
+        "structure": 0,
+        "survivor": 0,
+        "type": "corvette"
+      }
+    ],
+    "final_defender_ships": [
+      {
+        "armor": 240,
+        "bullet": 50,
+        "class": "Dreadnought",
+        "laser": 0,
+        "longname": "Dreadnought Imperial",
+        "lost": 0,
+        "n": 1,
+        "pos": "7",
+        "rocket": 0,
+        "shield": 160,
+        "structure": 200,
+        "survivor": 1,
+        "type": "dreadnought1"
+      }
+    ],
+    "initial_attacker_ships": [
+      {
+        "armor": 8.24,
+        "bullet": 0.0,
+        "class": "Corvette",
+        "laser": 0.0,
+        "longname": "Corvette Crocus",
+        "lost": 0,
+        "n": 1,
+        "pos": "1",
+        "rocket": 2.04,
+        "shield": 10.3,
+        "structure": 6.18,
+        "survivor": 1,
+        "type": "corvette"
+      }
+    ],
+    "initial_defender_ships": [
+      {
+        "armor": 240,
+        "bullet": 50,
+        "class": "Dreadnought",
+        "laser": 0,
+        "longname": "Dreadnought Imperial",
+        "lost": 0,
+        "n": 1,
+        "pos": "7",
+        "rocket": 0,
+        "shield": 160,
+        "structure": 200,
+        "survivor": 1,
+        "type": "dreadnought1"
+      }
+    ],
+    "mission_id": "M-Z3P6JP3GGM8",
+    "ore": 0.0,
+    "result": 1,
+    "support_mission_id": "M-ZF5GLV6MX00",
+    "trx_id": "a884c51a4a0b1f3863020bcb66c9ad00df7d60be",
+    "uranium": 0.0
+  }
+]
 ```
