@@ -838,44 +838,38 @@ curl https://nextcolony.io/api/loadfleetmission?user=holger80&active=1&planetid=
 ```json
 [
   {
-    "arrival": 1559010640,
+    "arrival": 1559633820,
     "battles": 0,
     "cancel_trx": null,
-    "end_x": 237,
-    "end_y": 123,
+    "end_x": -156,
+    "end_y": -239,
     "from_planet": {
       "bonus": "common",
-      "name": "Platura",
+      "name": "4",
       "planet_type": "earth",
-      "user": "platuro"
+      "user": "jarunik"
     },
-    "id": "M-Z38R5LW7J8G",
+    "id": "M-ZXKN34FL08G",
     "resources": { "coal": 0, "copper": 0, "ore": 0, "uranium": 0 },
     "result": null,
     "return": null,
     "ships": {
-      "battlecruiser": 0,
-      "carrier": 0,
-      "corvette": 1,
-      "cruiser": 0,
-      "destroyer": 0,
-      "dreadnought": 0,
-      "explorership": 0,
-      "frigate": 0,
-      "total": 1,
-      "transportship": 0
+      "carrier": { "n": 1, "pos": 2 },
+      "carrier1": { "n": 1, "pos": 1 },
+      "dreadnought": { "n": 1, "pos": 3 },
+      "total": 3
     },
-    "start_x": -157,
+    "start_x": -156,
     "start_y": -239,
     "to_planet": {
-      "bonus": "legendary",
-      "name": "Tartaros",
-      "planet_type": "uranium",
-      "user": "platuro"
+      "bonus": "common",
+      "name": "4",
+      "planet_type": "earth",
+      "user": "jarunik"
     },
     "type": "support",
-    "user": "platuro"
-  }
+    "user": "jarunik"
+  },
 ]
 ```
 
