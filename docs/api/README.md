@@ -838,60 +838,43 @@ curl https://nextcolony.io/api/loadfleetmission?user=holger80&active=1&planetid=
 ```json
 [
   {
-    "arrival": 1559676543,
-    "battles": 4,
-    "cancel_trx": "e14aa03cbb7eac650763d97f718793bc516843ae",
-    "end_x": -158,
-    "end_y": -238,
+    "arrival": 1559010640,
+    "battles": 0,
+    "cancel_trx": null,
+    "end_x": 237,
+    "end_y": 123,
     "from_planet": {
       "bonus": "common",
-      "name": "Alpha",
+      "name": "Platura",
       "planet_type": "earth",
-      "user": "holger.random"
+      "user": "platuro"
     },
-    "id": "M-Z1TKX79EUK0",
+    "id": "M-Z38R5LW7J8G",
     "resources": { "coal": 0, "copper": 0, "ore": 0, "uranium": 0 },
-    "result": "1",
+    "result": null,
     "return": null,
-    "ships": { "dreadnought1": 1, "total": 1 },
-    "start_x": -158,
-    "start_y": -237,
+    "ships": {
+      "battlecruiser": 0,
+      "carrier": 0,
+      "corvette": 1,
+      "cruiser": 0,
+      "destroyer": 0,
+      "dreadnought": 0,
+      "explorership": 0,
+      "frigate": 0,
+      "total": 1,
+      "transportship": 0
+    },
+    "start_x": -157,
+    "start_y": -239,
     "to_planet": {
-      "bonus": "rare",
-      "name": "holger80#1",
-      "planet_type": "ore",
-      "user": "holger80"
+      "bonus": "legendary",
+      "name": "Tartaros",
+      "planet_type": "uranium",
+      "user": "platuro"
     },
     "type": "support",
-    "user": "holger.random"
-  },
-  {
-    "arrival": 1559557596,
-    "battles": 2,
-    "cancel_trx": null,
-    "end_x": -158,
-    "end_y": -238,
-    "from_planet": {
-      "bonus": "common",
-      "name": "Alpha",
-      "planet_type": "earth",
-      "user": "holger.random"
-    },
-    "id": "M-ZOTFMBOHUPS",
-    "resources": { "coal": 0, "copper": 0, "ore": 0, "uranium": 0 },
-    "result": "2",
-    "return": null,
-    "ships": { "destroyer": 1, "dreadnought1": 1, "total": 2 },
-    "start_x": -158,
-    "start_y": -237,
-    "to_planet": {
-      "bonus": "rare",
-      "name": "holger80#1",
-      "planet_type": "ore",
-      "user": "holger80"
-    },
-    "type": "attack",
-    "user": "holger.random"
+    "user": "platuro"
   }
 ]
 ```
