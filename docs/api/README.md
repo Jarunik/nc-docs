@@ -845,6 +845,7 @@ curl https://nextcolony.io/api/loadfleetmission?user=holger80&active=1&planetid=
     "end_y": -239,
     "from_planet": {
       "bonus": "common",
+      "id": "P-Z8MVHPCCL80",
       "name": "4",
       "planet_type": "earth",
       "user": "jarunik"
