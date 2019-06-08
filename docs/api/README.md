@@ -77,55 +77,46 @@ Load the building information of a planet.
 ### Examples
 
 ```sh
-curl https://nextcolony.io/api/loadbuildings?id=1005
+curl https://nextcolony.io/api/loadbuildings?id=P-Z5CNNNZTL40
 ```
 
 ```json
 [
   {
     "base": 0,
-    "busy": 1556114383,
-    "coal": 230,
-    "copper": 67,
+    "busy": 1557678603,
+    "coal": 0,
+    "copper": 0,
     "cur_rate": null,
-    "current": 11,
-    "name": "base",
+    "current": 20,
+    "misc": null,
+    "name": "shipyard",
     "next_rate": null,
-    "ore": 161,
+    "ore": 0,
     "research": 0,
-    "skill": 12,
-    "time": 22616,
-    "uranium": 24
+    "skill": 20,
+    "time": 0,
+    "uranium": 0
   },
   {
     "base": 0,
-    "busy": 1556105126,
-    "coal": 250,
-    "copper": 104,
-    "cur_rate": 2880,
-    "current": 12,
-    "name": "coaldepot",
-    "next_rate": 3120,
-    "ore": 300,
+    "busy": 1558897868,
+    "coal": 19,
+    "copper": 5,
+    "cur_rate": null,
+    "current": 1,
+    "misc": {
+      "shieldcharge_busy": 1558966482,
+      "shieldcharged": 1,
+      "shieldprotection_busy": 0
+    },
+    "name": "shieldgenerator",
+    "next_rate": null,
+    "ore": 10,
     "research": 0,
-    "skill": 10,
-    "time": 27614,
-    "uranium": 47
-  },
-  {
-    "base": 0,
-    "busy": 1556105126,
-    "coal": 208,
-    "copper": 104,
-    "cur_rate": 960,
-    "current": 12,
-    "name": "coalmine",
-    "next_rate": 1040,
-    "ore": 349,
-    "research": 0,
-    "skill": 13,
-    "time": 27614,
-    "uranium": 42
+    "skill": 2,
+    "time": 1951,
+    "uranium": 2
   }
 ]
 ```
@@ -346,10 +337,10 @@ Check for available ships in the shipyard
 
 ### Query Parameters
 
-| Name |  Type  | Description       |      Required      |
-| :--- | :----: | :---------------- | :----------------: |
-| name | string | Name of the ship  | :white_check_mark: |
-| id   | string | UID of the planet | :white_check_mark: |
+| Name |  Type  | Description                                              |      Required      |
+| :--- | :----: | :------------------------------------------------------- | :----------------: |
+| id   | string | UID of the planet                                        | :white_check_mark: |
+| name | string | Deprecated: Name of the ship (returns obsolete response) |        :x:         |
 
 ### Types
 
@@ -358,6 +349,48 @@ Check for available ships in the shipyard
 | busy  | Timestamp when the next action is possible as a string |
 
 ### Examples
+
+```sh
+curl https://nextcolony.io/api/shipyard?id=P-Z8MVHPCCL80
+```
+
+```json
+[
+  {
+    "activated": false,
+    "armor": 20,
+    "bullet": 0,
+    "busy_until": null,
+    "capacity": 160,
+    "class": "Battlecruiser",
+    "consumption": 0.0038,
+    "cost": {
+      "coal": 576,
+      "copper": 144,
+      "ore": 288,
+      "time": 94254.40000000001,
+      "uranium": 72
+    },
+    "cur_level": 20,
+    "cur_level_skill": 20,
+    "laser": 0,
+    "longname": "Battlecruiser Tiger",
+    "min_level": 18,
+    "rocket": 8,
+    "shield": 36,
+    "skill": 20,
+    "speed": 2.0,
+    "structure": 40,
+    "type": "battlecruiser",
+    "variant": 0,
+    "variant_name": "rocket"
+  }
+]
+```
+
+#### Deprecated
+
+Please don't use this version and switch to the above without the name parameter.
 
 ```sh
 curl https://nextcolony.io/api/shipyard?id=P-Z8MVHPCCL80&name=transportship
@@ -465,7 +498,9 @@ Load ranking of users
 
 ### Query Parameters
 
-none
+| Name |  Type  | Description                                               | Required |
+| :--- | :----: | :-------------------------------------------------------- | :------: |
+| sort | string | Indicating sort order, currently only `meta`is supported. |   :x:    |
 
 ### Types
 
@@ -480,37 +515,18 @@ curl https://nextcolony.io/api/loadranking
 ```json
 [
   {
-    "coal": 1125.6,
-    "copper": 281.4,
-    "explorations": 0,
-    "meta_rate": 77.28,
-    "meta_skill": 206,
-    "ore": 562.8,
-    "planets": 1,
-    "uranium": 350.7,
-    "user": "mancer-sm-alt"
-  },
-  {
-    "coal": 1045.2,
-    "copper": 261.3,
-    "explorations": 3,
-    "meta_rate": 71.76,
-    "meta_skill": 198,
-    "ore": 522.6,
-    "planets": 1,
-    "uranium": 325.65,
-    "user": "reggaemuffin"
-  },
-  {
-    "coal": 964.8,
-    "copper": 220.0,
-    "explorations": 0,
-    "meta_rate": 65.12,
-    "meta_skill": 149,
-    "ore": 480.0,
-    "planets": 1,
-    "uranium": 300.6,
-    "user": "xx0xx"
+    "coal": 2284.8,
+    "copper": 530.4,
+    "destroyed_ships": 28,
+    "destroyed_ships_uranium": 5051.25,
+    "explorations": 117,
+    "meta_rate": 110.16,
+    "meta_skill": 472,
+    "ore": 1101.6,
+    "planets": 3,
+    "ships": 98,
+    "uranium": 275.4,
+    "user": "oliverschmid"
   }
 ]
 ```
@@ -525,7 +541,9 @@ Load shop items
 
 ### Query Parameters
 
-none
+| Name |  Type  | Description                               | Required |
+| :--- | :----: | :---------------------------------------- | :------: |
+| user | string | Steem user, to get activation information |   :x:    |
 
 ### Types
 
@@ -540,33 +558,63 @@ curl https://nextcolony.io/api/loadshop
 ```json
 [
   {
+    "activated_planets": [],
+    "blueprint": null,
     "booster": null,
     "coal": 800,
     "copper": 200,
     "cost": 9.99,
     "id": "chest_01",
     "imgid": "chest_01",
-    "left": 100,
+    "left": 150,
     "max_left": null,
     "max_supply": null,
     "name": "Chest",
     "ore": 400,
-    "total": 100,
+    "total": 150,
     "uranium": 100
+  }
+]
+```
+
+```sh
+curl https://nextcolony.io/api/loadshop?user=holger80
+```
+
+```json
+[
+  {
+    "activated_planets": [],
+    "blueprint": null,
+    "booster": null,
+    "coal": 8800,
+    "copper": 2200,
+    "cost": 99.0,
+    "id": "chest_03",
+    "imgid": "chest_03",
+    "left": 30,
+    "max_left": null,
+    "max_supply": null,
+    "name": "Imperium Chest",
+    "ore": 4400,
+    "total": 30,
+    "uranium": 1100
   },
   {
-    "booster": 10.0,
+    "activated_planets": ["P-Z4QHNR6NBMO", "P-Z8MVHPCCL80"],
+    "blueprint": "corvette1",
+    "booster": null,
     "coal": null,
     "copper": null,
-    "cost": 0.01,
-    "id": "booster_01",
-    "imgid": "booster_01",
-    "left": 4,
-    "max_left": 489,
-    "max_supply": 500,
-    "name": "Rune",
+    "cost": 0.001,
+    "id": "blueprint_01",
+    "imgid": "blueprint_01",
+    "left": 3492,
+    "max_left": 3492,
+    "max_supply": 3500,
+    "name": "Corvette Petunia",
     "ore": null,
-    "total": 4,
+    "total": 3500,
     "uranium": null
   }
 ]
@@ -631,21 +679,6 @@ curl https://nextcolony.io/api/loadfleet?user=holger80&planetid=P-Z8MVHPCCL80
     "type": "corvette",
     "uranium": 0.0,
     "ver": -37
-  },
-  {
-    "busy": 1556067120,
-    "capacity": 0.0,
-    "coal": 0.0,
-    "cons": 0.002,
-    "copper": 0.0,
-    "hor": -272,
-    "id": "S-ZM4LG9CYG4W",
-    "lastupdate": 1556134221,
-    "ore": 0.0,
-    "speed": 1.0,
-    "type": "explorership",
-    "uranium": 0.002,
-    "ver": -37
   }
 ]
 ```
@@ -706,6 +739,7 @@ curl https://nextcolony.io/api/loaditems?user=holger.random
 ```json
 [
   {
+    "blueprint": null,
     "booster": 10.0,
     "coal": null,
     "copper": null,
@@ -713,7 +747,7 @@ curl https://nextcolony.io/api/loaditems?user=holger.random
     "imgid": "booster_01",
     "name": "Rune",
     "ore": null,
-    "total": 1,
+    "total": 3,
     "uid": "B1-ZALXR6HPJLC",
     "uranium": null
   }
@@ -734,6 +768,7 @@ Load an area of the galaxy based on the areas center coordinates.
 | :--- | :----: | :-------------------------------------------- | :----------------: |
 | x    | number | Center X axis coordinates of the area to load | :white_check_mark: |
 | y    | number | Center y axis coordinates of the area to load | :white_check_mark: |
+| user | string | Steem user                                    |        :x:         |
 
 ### Types
 
@@ -747,11 +782,24 @@ curl https://nextcolony.io/api/loadgalaxy?x=0&y=0
 
 ```json
 {
-  "area": { "xmax": 12, "xmin": -11, "ymax": 7, "ymin": -7 },
-  "explore": [],
-  "explored": [],
+  "area": { "xmax": -144, "xmin": -167, "ymax": -231, "ymin": -245 },
+  "explore": [
+    {
+      "date": 1559643780,
+      "type": "explore",
+      "user": "oliverschmid",
+      "x": -157,
+      "y": -236
+    }
+  ],
   "planets": [
-    { "id": "1", "img": "leg_atm_1.png", "type": "planet", "x": 0, "y": 0 }
+    {
+      "id": "P-ZK4X98AY9S0",
+      "img": "co_atm_1.png",
+      "type": "planet",
+      "x": -160,
+      "y": -243
+    }
   ]
 }
 ```
@@ -766,11 +814,13 @@ Get all the fleets missions of a user.
 
 ### Query Parameters
 
-| Name     |  Type  | Description                                  |      Required      |
-| :------- | :----: | :------------------------------------------- | :----------------: |
-| user     | string | Steem user                                   | :white_check_mark: |
-| planetid | string | UID of the planet                            |        :x:         |
-| active   | number | default 0 = all mission, 1 = active missions |        :x:         |
+| Name     |  Type  | Description                                     |      Required      |
+| :------- | :----: | :---------------------------------------------- | :----------------: |
+| user     | string | Steem user                                      | :white_check_mark: |
+| planetid | string | UID of the planet                               |        :x:         |
+| active   | number | 1 = show only active, 0 = filter out active     |        :x:         |
+| outgoing | number | 1 = show only outgoing, 0 = filter out outgoing |        :x:         |
+| hold     | number | 1 = show only outgoing, 0 = filter out outgoing |        :x:         |
 
 ### Types
 
@@ -778,8 +828,6 @@ Get all the fleets missions of a user.
 | :------ | :-------------------------------------------------------------------------------: |
 | arrival |  Timestamp when the ship will arrive at the destination, `new Date(busy * 1000)`  |
 | return  | Timestamp when the ship will return from the destination, `new Date(busy * 1000)` |
-| new     |                              List of active missions                              |
-| old     |                             List of finished missions                             |
 
 ### Examples
 
@@ -788,59 +836,41 @@ curl https://nextcolony.io/api/loadfleetmission?user=holger80&active=1&planetid=
 ```
 
 ```json
-{
-  "new": [
-    {
-      "arrival": 1557401609,
-      "end_x": -265,
-      "end_y": -38,
-      "id": "M-ZSD2M8WLF8G",
-      "resources": { "coal": 0, "copper": 0, "ore": 0, "uranium": 0 },
-      "result": null,
-      "return": 1557414337,
-      "ships": {
-        "battlecruiser": 0,
-        "carrier": 0,
-        "corvette": 0,
-        "cruiser": 0,
-        "destroyer": 0,
-        "dreadnought": 0,
-        "explorership": 0,
-        "frigate": 0,
-        "total": 1,
-        "transportship": 1
-      },
-      "start_x": -272,
-      "start_y": -37,
-      "type": "transport"
+[
+  {
+    "arrival": 1559633820,
+    "battles": 0,
+    "cancel_trx": null,
+    "end_x": -156,
+    "end_y": -239,
+    "from_planet": {
+      "bonus": "common",
+      "name": "4",
+      "planet_type": "earth",
+      "user": "jarunik"
     },
-    {
-      "arrival": 1557399597,
-      "end_x": -269,
-      "end_y": -37,
-      "id": "M-ZZQGSD1R3DS",
-      "resources": { "coal": 0, "copper": 0, "ore": 0, "uranium": 0 },
-      "result": null,
-      "return": 1557410397,
-      "ships": {
-        "battlecruiser": 0,
-        "carrier": 0,
-        "corvette": 0,
-        "cruiser": 0,
-        "destroyer": 0,
-        "dreadnought": 0,
-        "explorership": 1,
-        "frigate": 0,
-        "total": 1,
-        "transportship": 0
-      },
-      "start_x": -272,
-      "start_y": -37,
-      "type": "explorespace"
-    }
-  ],
-  "old": []
-}
+    "id": "M-ZXKN34FL08G",
+    "resources": { "coal": 0, "copper": 0, "ore": 0, "uranium": 0 },
+    "result": null,
+    "return": null,
+    "ships": {
+      "carrier": { "n": 1, "pos": 2 },
+      "carrier1": { "n": 1, "pos": 1 },
+      "dreadnought": { "n": 1, "pos": 3 },
+      "total": 3
+    },
+    "start_x": -156,
+    "start_y": -239,
+    "to_planet": {
+      "bonus": "common",
+      "name": "4",
+      "planet_type": "earth",
+      "user": "jarunik"
+    },
+    "type": "support",
+    "user": "jarunik"
+  },
+]
 ```
 
 ## loadplanet
@@ -853,9 +883,13 @@ Get the information about a specific planet
 
 ### Query Parameters
 
-| Name     |  Type  | Description       |      Required      |
-| :------- | :----: | :---------------- | :----------------: |
-| planetid | string | UID of the planet | :white_check_mark: |
+| Name |  Type  | Description           | Required |
+| :--- | :----: | :-------------------- | :------: |
+| id   | string | UID of the planet     |   :x:    |
+| x    | number | Horizontal Coordinate |   :x:    |
+| y    | number | Vertical Coordinate   |   :x:    |
+
+You can either load it by planetid or x/y coordinates.
 
 ### Types
 
@@ -973,4 +1007,127 @@ curl https://nextcolony.io/api/loadtransaction?trx_id=9874df43329b9a406cdff8e7f6
   "user": "holger80",
   "virtualop": 0
 }
+```
+
+## loadbattle
+
+Load the results of a battle mission.
+
+### Endpoint
+
+`GET /api/loadbattle`
+
+### Query Parameters
+
+| Name       |  Type  | Description        |      Required      |
+| :--------- | :----: | :----------------- | :----------------: |
+| user       | string | Steem user         | :white_check_mark: |
+| mission_id | string | Uid of the mission | :white_check_mark: |
+
+### Types
+
+| Field  |             Description             |
+| :----- | :---------------------------------: |
+| date   | Timestamp of the battle in seconds. |
+| result |        2=win, 1=lose, 0=draw        |
+
+### Examples
+
+```sh
+curl https://nextcolony.io/api/loadbattle?user=jarunik&mission_id=M-Z3P6JP3GGM8
+```
+
+```json
+[
+  {
+    "attacker": "oliverschmid",
+    "attacker_armorrep": 0.12,
+    "attacker_shieldregen": 0.215,
+    "battle_number": 1,
+    "coal": 0.0,
+    "copper": 0.0,
+    "cords_hor": -157,
+    "cords_hor_dest": -156,
+    "cords_ver": -238,
+    "cords_ver_dest": -239,
+    "date": 1559720584,
+    "defender": "rondras",
+    "defender_armorrep": 0.1,
+    "defender_shieldregen": 0.2,
+    "final_attacker_ships": [
+      {
+        "armor": 0,
+        "bullet": 0.0,
+        "class": "Corvette",
+        "laser": 0.0,
+        "longname": "Corvette Crocus",
+        "lost": 1,
+        "n": 1,
+        "pos": "1",
+        "rocket": 0.0,
+        "shield": 0,
+        "structure": 0,
+        "survivor": 0,
+        "type": "corvette"
+      }
+    ],
+    "final_defender_ships": [
+      {
+        "armor": 240,
+        "bullet": 50,
+        "class": "Dreadnought",
+        "laser": 0,
+        "longname": "Dreadnought Imperial",
+        "lost": 0,
+        "n": 1,
+        "pos": "7",
+        "rocket": 0,
+        "shield": 160,
+        "structure": 200,
+        "survivor": 1,
+        "type": "dreadnought1"
+      }
+    ],
+    "initial_attacker_ships": [
+      {
+        "armor": 8.24,
+        "bullet": 0.0,
+        "class": "Corvette",
+        "laser": 0.0,
+        "longname": "Corvette Crocus",
+        "lost": 0,
+        "n": 1,
+        "pos": "1",
+        "rocket": 2.04,
+        "shield": 10.3,
+        "structure": 6.18,
+        "survivor": 1,
+        "type": "corvette"
+      }
+    ],
+    "initial_defender_ships": [
+      {
+        "armor": 240,
+        "bullet": 50,
+        "class": "Dreadnought",
+        "laser": 0,
+        "longname": "Dreadnought Imperial",
+        "lost": 0,
+        "n": 1,
+        "pos": "7",
+        "rocket": 0,
+        "shield": 160,
+        "structure": 200,
+        "survivor": 1,
+        "type": "dreadnought1"
+      }
+    ],
+    "mission_id": "M-Z3P6JP3GGM8",
+    "ore": 0.0,
+    "result": 1,
+    "support_mission_id": "M-ZF5GLV6MX00",
+    "trx_id": "a884c51a4a0b1f3863020bcb66c9ad00df7d60be",
+    "uranium": 0.0
+  }
+]
 ```
