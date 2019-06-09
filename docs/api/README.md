@@ -1029,10 +1029,11 @@ Load the results of a battle mission.
 
 ### Query Parameters
 
-| Name       |  Type  | Description        |      Required      |
-| :--------- | :----: | :----------------- | :----------------: |
-| user       | string | Steem user         | :white_check_mark: |
-| mission_id | string | Uid of the mission | :white_check_mark: |
+| Name       |  Type  | Description              | Required |
+| :--------- | :----: | :----------------------- | :------: |
+| user       | string | Steem user               |   :x:    |
+| mission_id | string | Uid of the mission       |   :x:    |
+| limit      | number | Number of recent battles |   :x:    |
 
 ### Types
 
