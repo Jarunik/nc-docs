@@ -822,6 +822,8 @@ Get all the fleets missions of a user.
 | outgoing | number | 1 = show only outgoing, 0 = filter out outgoing          |        :x:         |
 | hold     | number | 1 = show only outgoing, 0 = filter out outgoing          |        :x:         |
 | onlyuser | number | 1 = show only the missions of the user (and no incoming) |        :x:         |
+| page     | number | Which page to fetch, starting at 0                       |        :x:         |
+| limit    | number | How much entries to fetch per page                       |        :x:         |
 
 ### Types
 
@@ -905,31 +907,31 @@ curl https://nextcolony.io/api/loadplanet?id=P-Z8MVHPCCL80
 
 ```json
 {
-"img": "co_atm_1.png",
-"level_base": 5,
-"level_coal": 13,
-"level_coaldepot": 12,
-"level_copper": 13,
-"level_copperdepot": 12,
-"level_ore": 15,
-"level_oredepot": 12,
-"level_research": 0,
-"level_ship": 13,
-"level_uranium": 14,
-"level_uraniumdepot": 12,
-"planet_bonus": 0,
-"planet_corx": 294,
-"planet_cory": -193,
-"planet_crts": 1555879062,
-"planet_id": "P-Z5CNNNZTL40",
-"planet_name": "01-Jar",
-"planet_rarity": "common",
-"planet_type": "earth",
-"shieldcharge_busy": 1560043782,
-"shieldprotection_busy": 0,
-"startplanet": 1,
-"total_type": 3286,
-"user": "jarunik"
+  "img": "co_atm_1.png",
+  "level_base": 5,
+  "level_coal": 13,
+  "level_coaldepot": 12,
+  "level_copper": 13,
+  "level_copperdepot": 12,
+  "level_ore": 15,
+  "level_oredepot": 12,
+  "level_research": 0,
+  "level_ship": 13,
+  "level_uranium": 14,
+  "level_uraniumdepot": 12,
+  "planet_bonus": 0,
+  "planet_corx": 294,
+  "planet_cory": -193,
+  "planet_crts": 1555879062,
+  "planet_id": "P-Z5CNNNZTL40",
+  "planet_name": "01-Jar",
+  "planet_rarity": "common",
+  "planet_type": "earth",
+  "shieldcharge_busy": 1560043782,
+  "shieldprotection_busy": 0,
+  "startplanet": 1,
+  "total_type": 3286,
+  "user": "jarunik"
 }
 ```
 
