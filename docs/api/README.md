@@ -765,11 +765,13 @@ Load an area of the galaxy based on the areas center coordinates.
 
 ### Query Parameters
 
-| Name |  Type  | Description                                   |      Required      |
-| :--- | :----: | :-------------------------------------------- | :----------------: |
-| x    | number | Center X axis coordinates of the area to load | :white_check_mark: |
-| y    | number | Center y axis coordinates of the area to load | :white_check_mark: |
-| user | string | Steem user                                    |        :x:         |
+| Name   |  Type  | Description                                   |      Required      |
+| :----- | :----: | :-------------------------------------------- | :----------------: |
+| x      | number | Center X axis coordinates of the area to load | :white_check_mark: |
+| y      | number | Center y axis coordinates of the area to load | :white_check_mark: |
+| user   | string | Steem user                                    |        :x:         |
+| height | number | Height of the area to fetch                   |        :x:         |
+| width  | number | Width of the area to fetch                    |        :x:         |
 
 ### Types
 
