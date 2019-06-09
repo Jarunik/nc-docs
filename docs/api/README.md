@@ -498,9 +498,10 @@ Load ranking of users
 
 ### Query Parameters
 
-| Name |  Type  | Description                                               | Required |
-| :--- | :----: | :-------------------------------------------------------- | :------: |
-| sort | string | Indicating sort order, currently only `meta`is supported. |   :x:    |
+| Name  |  Type  | Description                                               | Required |
+| :---- | :----: | :-------------------------------------------------------- | :------: |
+| sort  | string | Indicating sort order, currently only `meta`is supported. |   :x:    |
+| limit | number | How many entries of the ranking you want to retrieve.     |   :x:    |
 
 ### Types
 
