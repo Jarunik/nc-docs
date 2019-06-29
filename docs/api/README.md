@@ -1157,6 +1157,7 @@ Load the recent transactions to check what is happening in the game.
 | :---- | :----: | :-------------------------------------------------- | :------: |
 | limit | number | Number of recent transactions                       |   :x:    |
 | type  |  text  | Type of transaction (according to JSON definitions) |   :x:    |
+| user  | string | Steem user                                          |   :x:    |
 
 ### Types
 
