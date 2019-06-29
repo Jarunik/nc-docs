@@ -126,7 +126,7 @@ Upgrades a building.
 
 ### Special buildings
 
-`shipyard, base, researchcenter, bunker, shieldgenerator`
+`bashipyard, base, researchcenter, bunker, shieldgenerator`
 
 ## buildship
 
