@@ -350,8 +350,6 @@ Attack another planet with a formation of ships to fight and steal resources.
 | `tr_var3` | Vertical Coordinates (Y)                                               |
 | `tr_var4` | Planet uid of origin/start                                             |
 
-If you also send `transportship` to increase the fleets capacity they should be sent in `pos`: 8.
-
 It is currently not allowed to send the same ship class in multiple positions.
 
 ## cancel
@@ -460,3 +458,29 @@ Your ships will fight against attackers.
 | `tr_var2` | Horizontal Coordinates (X)                                             |
 | `tr_var3` | Vertical Coordinates (Y)                                               |
 | `tr_var4` | Planet uid of origin/start                                             |
+
+## breaksiege
+
+Attack another planet with a formation of ships to fight its besiegers.
+
+```json
+{
+  "username": "jarunik",
+  "type": "breaksiege",
+  "command": {
+    "tr_var1": { "corvette": { "pos": 1, "n": 1 } },
+    "tr_var2": "289",
+    "tr_var3": "-196",
+    "tr_var4": "P-Z5CNNNZTL40"
+  }
+}
+```
+
+| Field     | Description                                                            |
+| --------- | ---------------------------------------------------------------------- |
+| `tr_var1` | List of ships, `n`: number of ships, `pos`: position of the ship `1-8` |
+| `tr_var2` | Horizontal Coordinates (X)                                             |
+| `tr_var3` | Vertical Coordinates (Y)                                               |
+| `tr_var4` | Planet uid of origin/start                                             |
+
+It is currently not allowed to send the same ship class in multiple positions.
