@@ -1147,17 +1147,16 @@ curl https://nextcolony.io/api/loadbattle?user=jarunik&mission_id=M-Z3P6JP3GGM8
 
 Load the recent transactions to check what is happening in the game.
 
-
 ### Endpoint
 
 `GET /api/transactions`
 
 ### Query Parameters
 
-| Name   |  Type  | Description          |      Required      |
-| :----- | :----: | :------------------- | :----------------: |
-| limit | number | Number of recent transactions | :x: |
-| type | text | Type of transaction (according to JSON definitions) | :x: |
+| Name  |  Type  | Description                                         | Required |
+| :---- | :----: | :-------------------------------------------------- | :------: |
+| limit | number | Number of recent transactions                       |   :x:    |
+| type  |  text  | Type of transaction (according to JSON definitions) |   :x:    |
 
 ### Types
 
@@ -1166,50 +1165,50 @@ The result is according to the [NextColony JSON definitions](../json/README.md).
 ### Examples
 
 ```sh
-curl https://nextcolony.io/api/transactions?type=giftplanet
+curl https://nextcolony.io/api/transactions
 ```
 
 ```json
 [
-{
-"block_num": 34216133,
-"date": 1561789623,
-"error": null,
-"id": 2134213,
-"tr_status": 1,
-"tr_type": "giftplanet",
-"tr_var1": "P-Z31OJ22TI00",
-"tr_var2": "thugyimin",
-"tr_var3": "0",
-"tr_var4": "0",
-"tr_var5": "0",
-"tr_var6": "0",
-"tr_var7": "0",
-"tr_var8": "0",
-"trigger_block_num": null,
-"trx": "bc8e9d724ab97ba5d230ac21335bf87cf60a7b2c",
-"user": "bobokyaw",
-"virtualop": 0
-},
-{
-"block_num": 34203099,
-"date": 1561750482,
-"error": null,
-"id": 2115965,
-"tr_status": 1,
-"tr_type": "giftplanet",
-"tr_var1": "P-ZT9AMOA91O0",
-"tr_var2": "sarmaticus",
-"tr_var3": "0",
-"tr_var4": "0",
-"tr_var5": "0",
-"tr_var6": "0",
-"tr_var7": "0",
-"tr_var8": "0",
-"trigger_block_num": null,
-"trx": "074b55e3393214961637630f95a6cdf5f30f9477",
-"user": "sarmagames",
-"virtualop": 0
-}
+  {
+    "block_num": 34218115,
+    "date": 1561795571,
+    "error": null,
+    "id": 2137227,
+    "tr_status": 1,
+    "tr_type": "finishbuilding",
+    "tr_var1": "P-ZBPVYD9MBTS",
+    "tr_var2": "coppermine",
+    "tr_var3": "4",
+    "tr_var4": null,
+    "tr_var5": null,
+    "tr_var6": null,
+    "tr_var7": null,
+    "tr_var8": null,
+    "trigger_block_num": null,
+    "trx": "48e57de8e6a0453c76f84b42ce8fdb0cbd91f939",
+    "user": "passeggero",
+    "virtualop": 1
+  },
+  {
+    "block_num": 34218114,
+    "date": 1561795569,
+    "error": null,
+    "id": 2137226,
+    "tr_status": 2,
+    "tr_type": "explorespace",
+    "tr_var1": "P-ZM1DWS1ET9C",
+    "tr_var2": "18",
+    "tr_var3": "285",
+    "tr_var4": "0",
+    "tr_var5": "0",
+    "tr_var6": "0",
+    "tr_var7": "0",
+    "tr_var8": "0",
+    "trigger_block_num": null,
+    "trx": "5158368ec7aabb6bb83c837e34dd6a71f9cf1bfe",
+    "user": "take5",
+    "virtualop": 0
+  }
 ]
 ```
