@@ -184,13 +184,14 @@ The result of the script is the following:
 
 I did the same for all 930 found empty spaces with the following results:
 
-```Found 930 empty spaces
+```
+Found 930 empty spaces
 930 / 930 are valid
 ```
 
 I used the slightly modified `get_empty_space_found` function:
 
-```pyhton
+```python
 def get_empty_space_found(block_num, trx_id):
     block = Block(block_num)
     seed = hashlib.md5((trx_id + block["block_id"] + block["previous"]).encode()).hexdigest()     
