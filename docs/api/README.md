@@ -31,7 +31,7 @@ Load the resource quantities of a planet.
 
 ### Examples
 
-```sh
+```bash
 curl https://nextcolony.io/api/loadqyt?id=1005
 ```
 
@@ -76,7 +76,7 @@ Load the building information of a planet.
 
 ### Examples
 
-```sh
+```bash
 curl https://nextcolony.io/api/loadbuildings?id=P-Z5CNNNZTL40
 ```
 
@@ -144,7 +144,7 @@ Load the skills of a user.
 
 ### Examples
 
-```sh
+```bash
 curl https://nextcolony.io/api/loadskills?user=holger80
 ```
 
@@ -207,7 +207,7 @@ Load the planets.
 
 ### Examples
 
-```sh
+```bash
 curl https://nextcolony.io/api/loadplanets?user=holger80&from=0&to=1
 ```
 
@@ -223,7 +223,7 @@ curl https://nextcolony.io/api/loadplanets?user=holger80&from=0&to=1
 ]
 ```
 
-```sh
+```bash
 curl https://nextcolony.io/api/loadplanets?from=0&to=11
 ```
 
@@ -263,7 +263,7 @@ none
 
 ### Examples
 
-```sh
+```bash
 curl https://nextcolony.io/api/loadproduction?id=P-Z8MVHPCCL80&user=holger80
 ```
 
@@ -310,7 +310,7 @@ Load the resource costs for ships.
 
 ### Examples
 
-```sh
+```bash
 curl https://nextcolony.io/api/loadcost?level=0&name=transportship&planetID=P-Z8MVHPCCL80&busy=transportship
 ```
 
@@ -350,7 +350,7 @@ Check for available ships in the shipyard
 
 ### Examples
 
-```sh
+```bash
 curl https://nextcolony.io/api/shipyard?id=P-Z8MVHPCCL80
 ```
 
@@ -392,7 +392,7 @@ curl https://nextcolony.io/api/shipyard?id=P-Z8MVHPCCL80
 
 Please don't use this version and switch to the above without the name parameter.
 
-```sh
+```bash
 curl https://nextcolony.io/api/shipyard?id=P-Z8MVHPCCL80&name=transportship
 ```
 
@@ -434,7 +434,7 @@ Load item transfers
 
 ### Examples
 
-```sh
+```bash
 curl https://nextcolony.io/api/loadgift?user=holger.random
 ```
 
@@ -460,7 +460,7 @@ none
 
 ### Examples
 
-```sh
+```bash
 curl https://nextcolony.io/api/loadtranslation
 ```
 
@@ -509,7 +509,7 @@ none
 
 ### Examples
 
-```sh
+```bash
 curl https://nextcolony.io/api/loadranking
 ```
 
@@ -552,7 +552,7 @@ none
 
 ### Examples
 
-```sh
+```bash
 curl https://nextcolony.io/api/loadshop
 ```
 
@@ -578,7 +578,7 @@ curl https://nextcolony.io/api/loadshop
 ]
 ```
 
-```sh
+```bash
 curl https://nextcolony.io/api/loadshop?user=holger80
 ```
 
@@ -645,7 +645,7 @@ Load all ships of a planet.
 
 ### Examples
 
-```sh
+```bash
 curl https://nextcolony.io/api/loadfleet?user=holger80&planetid=P-Z8MVHPCCL80
 ```
 
@@ -705,7 +705,7 @@ none
 
 ### Examples
 
-```sh
+```bash
 curl https://nextcolony.io/api/loadcorddata?x=0&y=0
 ```
 
@@ -733,7 +733,7 @@ none
 
 ### Examples
 
-```sh
+```bash
 curl https://nextcolony.io/api/loaditems?user=holger.random
 ```
 
@@ -779,7 +779,7 @@ none
 
 ### Examples
 
-```sh
+```bash
 curl https://nextcolony.io/api/loadgalaxy?x=0&y=0
 ```
 
@@ -837,7 +837,7 @@ Get all the fleets missions of a user.
 
 ### Examples
 
-```sh
+```bash
 curl https://nextcolony.io/api/loadfleetmission?user=holger80&active=1&planetid=P-Z8MVHPCCL80
 ```
 
@@ -904,7 +904,7 @@ none
 
 ### Examples
 
-```sh
+```bash
 curl https://nextcolony.io/api/loadplanet?id=P-Z8MVHPCCL80
 ```
 
@@ -960,7 +960,7 @@ Get the registration date of a user. It can also be used to check existence of a
 
 ### Examples
 
-```sh
+```bash
 curl https://nextcolony.io/api/loaduser?user=jarunik
 ```
 
@@ -992,7 +992,7 @@ This endpoint is mostly for debugging purposes. The content is according to the 
 
 ### Examples
 
-```sh
+```bash
 curl https://nextcolony.io/api/loadtransaction?trx_id=9874df43329b9a406cdff8e7f6a0a7dd4f9db506
 ```
 
@@ -1044,7 +1044,7 @@ Load the results of a battle mission.
 
 ### Examples
 
-```sh
+```bash
 curl https://nextcolony.io/api/loadbattle?user=jarunik&mission_id=M-Z3P6JP3GGM8
 ```
 
@@ -1139,6 +1139,77 @@ curl https://nextcolony.io/api/loadbattle?user=jarunik&mission_id=M-Z3P6JP3GGM8
     "support_mission_id": "M-ZF5GLV6MX00",
     "trx_id": "a884c51a4a0b1f3863020bcb66c9ad00df7d60be",
     "uranium": 0.0
+  }
+]
+```
+
+## transactions
+
+Load the recent transactions to check what is happening in the game.
+
+### Endpoint
+
+`GET /api/transactions`
+
+### Query Parameters
+
+| Name  |  Type  | Description                                         | Required |
+| :---- | :----: | :-------------------------------------------------- | :------: |
+| limit | number | Number of recent transactions                       |   :x:    |
+| type  |  text  | Type of transaction (according to JSON definitions) |   :x:    |
+| user  | string | Steem user                                          |   :x:    |
+
+### Types
+
+The result is according to the [NextColony JSON definitions](../json/README.md).
+
+### Examples
+
+```bash
+curl https://nextcolony.io/api/transactions
+```
+
+```json
+[
+  {
+    "block_num": 34218115,
+    "date": 1561795571,
+    "error": null,
+    "id": 2137227,
+    "tr_status": 1,
+    "tr_type": "finishbuilding",
+    "tr_var1": "P-ZBPVYD9MBTS",
+    "tr_var2": "coppermine",
+    "tr_var3": "4",
+    "tr_var4": null,
+    "tr_var5": null,
+    "tr_var6": null,
+    "tr_var7": null,
+    "tr_var8": null,
+    "trigger_block_num": null,
+    "trx": "48e57de8e6a0453c76f84b42ce8fdb0cbd91f939",
+    "user": "passeggero",
+    "virtualop": 1
+  },
+  {
+    "block_num": 34218114,
+    "date": 1561795569,
+    "error": null,
+    "id": 2137226,
+    "tr_status": 2,
+    "tr_type": "explorespace",
+    "tr_var1": "P-ZM1DWS1ET9C",
+    "tr_var2": "18",
+    "tr_var3": "285",
+    "tr_var4": "0",
+    "tr_var5": "0",
+    "tr_var6": "0",
+    "tr_var7": "0",
+    "tr_var8": "0",
+    "trigger_block_num": null,
+    "trx": "5158368ec7aabb6bb83c837e34dd6a71f9cf1bfe",
+    "user": "take5",
+    "virtualop": 0
   }
 ]
 ```

@@ -126,7 +126,7 @@ Upgrades a building.
 
 ### Special buildings
 
-`shipyard, base, researchcenter, bunker, shieldgenerator`
+`bashipyard, base, researchcenter, bunker, shieldgenerator`
 
 ## buildship
 
@@ -350,8 +350,6 @@ Attack another planet with a formation of ships to fight and steal resources.
 | `tr_var3` | Vertical Coordinates (Y)                                               |
 | `tr_var4` | Planet uid of origin/start                                             |
 
-If you also send `transportship` to increase the fleets capacity they should be sent in `pos`: 8.
-
 It is currently not allowed to send the same ship class in multiple positions.
 
 ## cancel
@@ -432,3 +430,57 @@ Charge the Shield generator in order that it can be enabled.
 | --------- | ------------- |
 | `tr_var1` | Planet uid    |
 | `tr_var2` | Building Name |
+
+## siege
+
+Send a fleet to besiege another planet. Outgoing missions of the target planet will be blocked.
+Your ships will fight against attackers.
+
+```json
+{
+  "username": "holger80",
+  "type": "seige",
+  "command": {
+    "tr_var1": {
+      "corvette": { "pos": 1, "n": 2 },
+      "transportship": { "pos": 8, "n": 1 }
+    },
+    "tr_var2": -269,
+    "tr_var3": -46,
+    "tr_var4": "P-Z8MVHPCCL80"
+  }
+}
+```
+
+| Field     | Description                                                            |
+| --------- | ---------------------------------------------------------------------- |
+| `tr_var1` | List of ships, `n`: number of ships, `pos`: position of the ship `1-8` |
+| `tr_var2` | Horizontal Coordinates (X)                                             |
+| `tr_var3` | Vertical Coordinates (Y)                                               |
+| `tr_var4` | Planet uid of origin/start                                             |
+
+## breaksiege
+
+Attack another planet with a formation of ships to fight its besiegers.
+
+```json
+{
+  "username": "jarunik",
+  "type": "breaksiege",
+  "command": {
+    "tr_var1": { "corvette": { "pos": 1, "n": 1 } },
+    "tr_var2": "289",
+    "tr_var3": "-196",
+    "tr_var4": "P-Z5CNNNZTL40"
+  }
+}
+```
+
+| Field     | Description                                                            |
+| --------- | ---------------------------------------------------------------------- |
+| `tr_var1` | List of ships, `n`: number of ships, `pos`: position of the ship `1-8` |
+| `tr_var2` | Horizontal Coordinates (X)                                             |
+| `tr_var3` | Vertical Coordinates (Y)                                               |
+| `tr_var4` | Planet uid of origin/start                                             |
+
+It is currently not allowed to send the same ship class in multiple positions.
