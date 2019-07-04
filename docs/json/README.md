@@ -101,7 +101,7 @@ Skill names are:
 
 ### Commander
 
-`missioncontrol, structureimprove, armorimprove, shieldimprove, rocketimprove, bulletimprorve, laserimprove, regenerationbonus, repairbonus`
+`missioncontrol, structureimprove, armorimprove, shieldimprove, rocketimprove, bulletimprorve, laserimprove, regenerationbonus, repairbonus, siegeprolongation`
 
 ## upgrade
 
@@ -147,7 +147,7 @@ Builds a ship in the shipyard if the shipyard and skill level allow it.
 
 ### Ship Names
 
-`explorership, transportship, corvette, frigate, destroyer, cruiser, battlecruiser, carrier, dreadnought, corvette1, cruiser1, dreadnought1`
+`explorership, explorership1, transportship, corvette, frigate, destroyer, cruiser, battlecruiser, carrier, dreadnought, corvette1, frigate1, destroyer1, cruiser1, battlecruiser1, carrier1, dreadnought1, corvette2, frigate2, destroyer2, cruiser2, battlecruiser2, carrier2, dreadnought2,`
 
 ## explorespace
 
@@ -166,6 +166,7 @@ Starts a exploration mission, a explorer must be available and ready on the plan
 | `tr_var1` | Planet uid from which the explorership starts and the uranium is taken for providing fuel for the flight |
 | `tr_var2` | Horizontal space coordinate                                                                              |
 | `tr_var3` | vertical space coordinate                                                                                |
+| `tr_var4` | Ship name of the explorer to be used                                                                     |
 
 ## transport
 
