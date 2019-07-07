@@ -1213,3 +1213,36 @@ curl https://nextcolony.io/api/transactions
   }
 ]
 ```
+
+## state
+
+Load the synchronisation state of the backend server
+
+### Endpoint
+
+`GET /api/state`
+
+### Query Parameters
+
+None
+
+### Types
+
+N/A
+
+### Examples
+
+```bash
+curl https://nextcolony.io/api/state
+```
+
+```json
+{
+"first_unprocessed_block_num": 34456077,
+"latest_block_num": 34456077,
+"processing_delay_seconds": 0,
+"tracker_block_num": 34456077,
+"tracker_delay_seconds": 0
+}
+```
+
