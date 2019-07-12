@@ -214,11 +214,12 @@ curl https://nextcolony.io/api/loadplanets?user=holger80&from=0&to=1
 ```json
 [
   {
-    "id": "P-Z8MVHPCCL80",
-    "name": "holger80#1",
-    "posx": -272,
-    "posy": -37,
-    "starter": 1
+    "id": "P-Z5CNNNZTL40",
+    "name": "01-Jar",
+    "posx": 294,
+    "posy": -193,
+    "starter": 1,
+    "username": "jarunik"
   }
 ]
 ```
@@ -1238,11 +1239,10 @@ curl https://nextcolony.io/api/state
 
 ```json
 {
-"first_unprocessed_block_num": 34456077,
-"latest_block_num": 34456077,
-"processing_delay_seconds": 0,
-"tracker_block_num": 34456077,
-"tracker_delay_seconds": 0
+  "first_unprocessed_block_num": 34456077,
+  "latest_block_num": 34456077,
+  "processing_delay_seconds": 0,
+  "tracker_block_num": 34456077,
+  "tracker_delay_seconds": 0
 }
 ```
-
