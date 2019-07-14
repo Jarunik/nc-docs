@@ -32,7 +32,7 @@ Load the resource quantities of a planet.
 ### Examples
 
 ```bash
-curl https://nextcolony.io/api/loadqyt?id=1005
+curl https://api.nextcolony.io/loadqyt?id=1005
 ```
 
 ```json
@@ -77,7 +77,7 @@ Load the building information of a planet.
 ### Examples
 
 ```bash
-curl https://nextcolony.io/api/loadbuildings?id=P-Z5CNNNZTL40
+curl https://api.nextcolony.io/loadbuildings?id=P-Z5CNNNZTL40
 ```
 
 ```json
@@ -145,7 +145,7 @@ Load the skills of a user.
 ### Examples
 
 ```bash
-curl https://nextcolony.io/api/loadskills?user=holger80
+curl https://api.nextcolony.io/loadskills?user=holger80
 ```
 
 ```json
@@ -193,11 +193,12 @@ Load the planets.
 
 ### Query Parameters
 
-| Name |  Type  | Description | Required |
-| :--- | :----: | :---------- | :------: |
-| user | string | Steem user  |   :x:    |
-| from | number | Paging      |   :x:    |
-| to   | number | Paging      |   :x:    |
+| Name |  Type  | Description                                                                 | Required |
+| :--- | :----: | :-------------------------------------------------------------------------- | :------: |
+| user | string | Steem user                                                                  |   :x:    |
+| from | number | Paging                                                                      |   :x:    |
+| to   | number | Paging                                                                      |   :x:    |
+| sort | string | You can pass `date` to get results ordered by the date the planet was found |   :x:    |
 
 ### Types
 
@@ -208,24 +209,39 @@ Load the planets.
 ### Examples
 
 ```bash
-curl https://nextcolony.io/api/loadplanets?user=holger80&from=0&to=1
+curl https://api.nextcolony.io/loadplanets?user=holger80&from=0&to=10&sort=date
 ```
 
 ```json
-[
-  {
-    "id": "P-Z5CNNNZTL40",
-    "name": "01-Jar",
-    "posx": 294,
-    "posy": -193,
-    "starter": 1,
-    "username": "jarunik"
-  }
-]
+{
+  "misc": {
+    "total": 5660
+  },
+  "planets": [
+    {
+      "date": 1559183868,
+      "id": "P-Z3NVC8DS71C",
+      "name": "Beta",
+      "posx": 290,
+      "posy": 119,
+      "starter": 0,
+      "username": "holger80"
+    },
+    {
+      "date": 1555878927,
+      "id": "P-Z0IS2KK5JCG",
+      "name": "holger80#1",
+      "posx": 294,
+      "posy": 116,
+      "starter": 1,
+      "username": "holger80"
+    }
+  ]
+}
 ```
 
 ```bash
-curl https://nextcolony.io/api/loadplanets?from=0&to=11
+curl https://api.nextcolony.io/loadplanets?from=0&to=11
 ```
 
 ```json
@@ -265,7 +281,7 @@ none
 ### Examples
 
 ```bash
-curl https://nextcolony.io/api/loadproduction?id=P-Z8MVHPCCL80&user=holger80
+curl https://api.nextcolony.io/loadproduction?id=P-Z8MVHPCCL80&user=holger80
 ```
 
 ```json
@@ -312,7 +328,7 @@ Load the resource costs for ships.
 ### Examples
 
 ```bash
-curl https://nextcolony.io/api/loadcost?level=0&name=transportship&planetID=P-Z8MVHPCCL80&busy=transportship
+curl https://api.nextcolony.io/loadcost?level=0&name=transportship&planetID=P-Z8MVHPCCL80&busy=transportship
 ```
 
 ```json
@@ -352,7 +368,7 @@ Check for available ships in the shipyard
 ### Examples
 
 ```bash
-curl https://nextcolony.io/api/shipyard?id=P-Z8MVHPCCL80
+curl https://api.nextcolony.io/shipyard?id=P-Z8MVHPCCL80
 ```
 
 ```json
@@ -394,7 +410,7 @@ curl https://nextcolony.io/api/shipyard?id=P-Z8MVHPCCL80
 Please don't use this version and switch to the above without the name parameter.
 
 ```bash
-curl https://nextcolony.io/api/shipyard?id=P-Z8MVHPCCL80&name=transportship
+curl https://api.nextcolony.io/shipyard?id=P-Z8MVHPCCL80&name=transportship
 ```
 
 ```json
@@ -436,7 +452,7 @@ Load item transfers
 ### Examples
 
 ```bash
-curl https://nextcolony.io/api/loadgift?user=holger.random
+curl https://api.nextcolony.io/loadgift?user=holger.random
 ```
 
 ```json
@@ -462,7 +478,7 @@ none
 ### Examples
 
 ```bash
-curl https://nextcolony.io/api/loadtranslation
+curl https://api.nextcolony.io/loadtranslation
 ```
 
 ```json
@@ -511,7 +527,7 @@ none
 ### Examples
 
 ```bash
-curl https://nextcolony.io/api/loadranking
+curl https://api.nextcolony.io/loadranking
 ```
 
 ```json
@@ -554,7 +570,7 @@ none
 ### Examples
 
 ```bash
-curl https://nextcolony.io/api/loadshop
+curl https://api.nextcolony.io/loadshop
 ```
 
 ```json
@@ -580,7 +596,7 @@ curl https://nextcolony.io/api/loadshop
 ```
 
 ```bash
-curl https://nextcolony.io/api/loadshop?user=holger80
+curl https://api.nextcolony.io/loadshop?user=holger80
 ```
 
 ```json
@@ -647,7 +663,7 @@ Load all ships of a planet.
 ### Examples
 
 ```bash
-curl https://nextcolony.io/api/loadfleet?user=holger80&planetid=P-Z8MVHPCCL80
+curl https://api.nextcolony.io/loadfleet?user=holger80&planetid=P-Z8MVHPCCL80
 ```
 
 ```json
@@ -707,7 +723,7 @@ none
 ### Examples
 
 ```bash
-curl https://nextcolony.io/api/loadcorddata?x=0&y=0
+curl https://api.nextcolony.io/loadcorddata?x=0&y=0
 ```
 
 ```json
@@ -735,7 +751,7 @@ none
 ### Examples
 
 ```bash
-curl https://nextcolony.io/api/loaditems?user=holger.random
+curl https://api.nextcolony.io/loaditems?user=holger.random
 ```
 
 ```json
@@ -781,7 +797,7 @@ none
 ### Examples
 
 ```bash
-curl https://nextcolony.io/api/loadgalaxy?x=0&y=0
+curl https://api.nextcolony.io/loadgalaxy?x=0&y=0
 ```
 
 ```json
@@ -839,7 +855,7 @@ Get all the fleets missions of a user.
 ### Examples
 
 ```bash
-curl https://nextcolony.io/api/loadfleetmission?user=holger80&active=1&planetid=P-Z8MVHPCCL80
+curl https://api.nextcolony.io/loadfleetmission?user=holger80&active=1&planetid=P-Z8MVHPCCL80
 ```
 
 ```json
@@ -906,7 +922,7 @@ none
 ### Examples
 
 ```bash
-curl https://nextcolony.io/api/loadplanet?id=P-Z8MVHPCCL80
+curl https://api.nextcolony.io/loadplanet?id=P-Z8MVHPCCL80
 ```
 
 ```json
@@ -962,7 +978,7 @@ Get the registration date of a user. It can also be used to check existence of a
 ### Examples
 
 ```bash
-curl https://nextcolony.io/api/loaduser?user=jarunik
+curl https://api.nextcolony.io/loaduser?user=jarunik
 ```
 
 ```json
@@ -994,7 +1010,7 @@ This endpoint is mostly for debugging purposes. The content is according to the 
 ### Examples
 
 ```bash
-curl https://nextcolony.io/api/loadtransaction?trx_id=9874df43329b9a406cdff8e7f6a0a7dd4f9db506
+curl https://api.nextcolony.io/loadtransaction?trx_id=9874df43329b9a406cdff8e7f6a0a7dd4f9db506
 ```
 
 ```json
@@ -1046,7 +1062,7 @@ Load the results of a battle mission.
 ### Examples
 
 ```bash
-curl https://nextcolony.io/api/loadbattle?user=jarunik&mission_id=M-Z3P6JP3GGM8
+curl https://api.nextcolony.io/loadbattle?user=jarunik&mission_id=M-Z3P6JP3GGM8
 ```
 
 ```json
@@ -1167,7 +1183,7 @@ The result is according to the [NextColony JSON definitions](../json/README.md).
 ### Examples
 
 ```bash
-curl https://nextcolony.io/api/transactions
+curl https://api.nextcolony.io/transactions
 ```
 
 ```json
@@ -1234,7 +1250,7 @@ N/A
 ### Examples
 
 ```bash
-curl https://nextcolony.io/api/state
+curl https://api.nextcolony.io/state
 ```
 
 ```json
