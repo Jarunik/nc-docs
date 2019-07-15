@@ -147,7 +147,7 @@ Builds a ship in the shipyard if the shipyard and skill level allow it.
 
 ### Ship Names
 
-`explorership, explorership1, transportship, corvette, frigate, destroyer, cruiser, battlecruiser, carrier, dreadnought, corvette1, frigate1, destroyer1, cruiser1, battlecruiser1, carrier1, dreadnought1, corvette2, frigate2, destroyer2, cruiser2, battlecruiser2, carrier2, dreadnought2,`
+`explorership, explorership1, transportship, corvette, frigate, destroyer, cruiser, battlecruiser, carrier, dreadnought, corvette1, frigate1, destroyer1, cruiser1, battlecruiser1, carrier1, dreadnought1, corvette2, frigate2, destroyer2, cruiser2, battlecruiser2, carrier2, dreadnought2,transportship1,transportship2`
 
 ## explorespace
 
@@ -177,7 +177,7 @@ Transports resources to a location and returns to the start position afterwards.
   "username": "holger80",
   "type": "transport",
   "command": {
-    "tr_var1": 2,
+    "tr_var1": { "frigate": 1, "corvette1": 1 },
     "tr_var2": "P-ZN2FTQ9F3W0",
     "tr_var3": "52",
     "tr_var4": "-321",
@@ -189,16 +189,16 @@ Transports resources to a location and returns to the start position afterwards.
 }
 ```
 
-| Field     | Description                                                                           |
-| --------- | ------------------------------------------------------------------------------------- |
-| `tr_var1` | Number of transporter which should be used, must be available and ready on the planet |
-| `tr_var2` | Planet uid from which the transportship starts and the resources are taken            |
-| `tr_var3` | Horizontal space coordinate of a planet                                               |
-| `tr_var4` | Vertical space coordinate of a planet                                                 |
-| `tr_var5` | Amount of coal (can be a positive float or 0)                                         |
-| `tr_var6` | Amount of ore (can be a positive float or 0)                                          |
-| `tr_var7` | Amount of copper (can be a positive float or 0)                                       |
-| `tr_var8` | Amount of uranium (can be a positive float or 0)                                      |
+| Field     | Description                                                                                                                                                                                     |
+| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `tr_var1` | List of ships, either with ships name and quantity `{"transportship": 2, "explorership":1}` or (obsolete) number of transporter which should be used, must be available and ready on the planet |
+| `tr_var2` | Planet uid from which the transportship starts and the resources are taken                                                                                                                      |
+| `tr_var3` | Horizontal space coordinate of a planet                                                                                                                                                         |
+| `tr_var4` | Vertical space coordinate of a planet                                                                                                                                                           |
+| `tr_var5` | Amount of coal (can be a positive float or 0)                                                                                                                                                   |
+| `tr_var6` | Amount of ore (can be a positive float or 0)                                                                                                                                                    |
+| `tr_var7` | Amount of copper (can be a positive float or 0)                                                                                                                                                 |
+| `tr_var8` | Amount of uranium (can be a positive float or 0)                                                                                                                                                |
 
 ## activate
 
