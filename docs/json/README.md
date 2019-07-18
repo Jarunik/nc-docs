@@ -101,7 +101,7 @@ Skill names are:
 
 ### Commander
 
-`missioncontrol, structureimprove, armorimprove, shieldimprove, rocketimprove, bulletimprorve, laserimprove, regenerationbonus, repairbonus, siegeprolongation`
+`missioncontrol, structureimprove, armorimprove, shieldimprove, rocketimprove, bulletimprove, laserimprove, regenerationbonus, repairbonus, siegeprolongation`
 
 ## upgrade
 
