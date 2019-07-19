@@ -498,7 +498,33 @@ Transfers stardust from one player to another.
 }
 ```
 
-| Field     | Description                                                          |
-| --------- | -------------------------------------------------------------------- |
+| Field     | Description                                                           |
+| --------- | --------------------------------------------------------------------- |
 | `tr_var1` | Float amount of stardust to be transferred (8 digits after the point) |
-| `tr_var2` | Username to which the stardust is gifted                             |
+| `tr_var2` | Username to which the stardust is gifted                              |
+
+## issue
+
+Issues items into the game. This command will only be accepted from nextcolony or admin users.
+
+```json
+{
+  "username": "nextcolony",
+  "type": "issue",
+  "command": {
+    "tr_var1": "blueprint_10",
+    "tr_var2": 100,
+    "tr_var3": "nextcolony"
+  }
+}
+```
+
+| Field     | Description                   |
+| --------- | ----------------------------- |
+| `tr_var1` | Item to be issued             |
+| `tr_var2` | Amount of items to be issued  |
+| `tr_var3` | Recipient of the issued items |
+
+### Item Names
+
+`blueprint_01, blueprint_02, blueprint_03, blueprint_04, blueprint_05, blueprint_06, blueprint_07, blueprint_08, blueprint_09, blueprint_10, booster_01, booster_02, booster_03, chest_01, chest_02, chest_03`
