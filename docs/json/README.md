@@ -486,19 +486,19 @@ Attack another planet with a formation of ships to fight its besiegers.
 
 It is currently not allowed to send the same ship class in multiple positions.
 
-## giftstardust
+## transferstardust
 
 Transfers stardust from one player to another.
 
 ```json
 {
   "username": "holger80",
-  "type": "giftstardust",
+  "type": "transferstardust",
   "command": { "tr_var1": 1.0, "tr_var2": "holger.random" }
 }
 ```
 
 | Field     | Description                                                          |
 | --------- | -------------------------------------------------------------------- |
-| `tr_var1` | Float amount of stardust to be transfered (8 digits after the point) |
+| `tr_var1` | Float amount of stardust to be transferred (8 digits after the point) |
 | `tr_var2` | Username to which the stardust is gifted                             |
