@@ -1273,9 +1273,11 @@ Information about the users stardust
 
 ### Query Parameters
 
-| Name  |  Type  | Description                                         | Required |
-| :---- | :----: | :-------------------------------------------------- | :------: |
-| user  | string | Steem user                                          |   :white_check_mark:    |
+| Name  |  Type  | Description                        |      Required      |
+| :---- | :----: | :--------------------------------- | :----------------: |
+| user  | string | Steem user                         | :white_check_mark: |
+| limit | number | Number of recent transactions      |        :x:         |
+| page  | number | Which page to fetch, starting at 0 |        :x:         |
 
 ### Types
 
@@ -1289,21 +1291,21 @@ curl https://api.nextcolony.io/wallet?user=jarunik
 
 ```json
 {
-"date": 1555879062,
-"stardust": 989075678,
-"supply": 114989000000,
-"transactions": [
-{
-"amount": 10000000,
-"date": 1563655794,
-"from_user": "jarunik",
-"id": 4,
-"to_user": "oliverschmid",
-"tr_status": 1,
-"tr_type": "transfer",
-"trx": "7c398646fa627f627f4be50b3faef3d674caa9ce"
-}
-],
-"username": "jarunik"
+  "date": 1555879062,
+  "stardust": 989075678,
+  "supply": 114989000000,
+  "transactions": [
+    {
+      "amount": 10000000,
+      "date": 1563655794,
+      "from_user": "jarunik",
+      "id": 4,
+      "to_user": "oliverschmid",
+      "tr_status": 1,
+      "tr_type": "transfer",
+      "trx": "7c398646fa627f627f4be50b3faef3d674caa9ce"
+    }
+  ],
+  "username": "jarunik"
 }
 ```
