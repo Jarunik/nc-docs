@@ -1309,3 +1309,38 @@ curl https://api.nextcolony.io/wallet?user=jarunik
   "username": "jarunik"
 }
 ```
+
+## wallet_ranking
+
+Rich list of stardust per player.
+
+### Endpoint
+
+`GET /api/wallet_ranking`
+
+### Query Parameters
+
+N/A
+
+### Types
+
+N/A
+
+### Examples
+
+```bash
+curl https://api.nextcolony.io/wallet_ranking_
+```
+
+```json
+[
+{
+"stardust": 100077000000,
+"user": "holger80"
+},
+{
+"stardust": 11101000000,
+"user": "rondras"
+}
+]
+```
