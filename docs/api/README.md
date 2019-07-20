@@ -515,14 +515,14 @@ Load ranking of users
 
 ### Query Parameters
 
-| Name  |  Type  | Description                                               | Required |
-| :---- | :----: | :-------------------------------------------------------- | :------: |
-| sort  | string | Indicating sort order, currently only `meta`is supported. |   :x:    |
-| limit | number | How many entries of the ranking you want to retrieve.     |   :x:    |
+| Name  |  Type  | Description                                           | Required |
+| :---- | :----: | :---------------------------------------------------- | :------: |
+| sort  | string | Indicating sort order                                 |   :x:    |
+| limit | number | How many entries of the ranking you want to retrieve. |   :x:    |
 
 ### Types
 
-none
+Supported sort orders are `meta`, `explorations`, `planets`, `fleet`, `meta_skill`, `destroyed`
 
 ### Examples
 
