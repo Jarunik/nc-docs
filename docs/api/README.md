@@ -1335,10 +1335,12 @@ curl https://api.nextcolony.io/wallet_ranking_
 ```json
 [
 {
+"percentage": 87.0318030420301,
 "stardust": 100077000000,
 "user": "holger80"
 },
 {
+"percentage": 9.653966901181853,
 "stardust": 11101000000,
 "user": "rondras"
 }
