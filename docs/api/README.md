@@ -1262,3 +1262,62 @@ curl https://api.nextcolony.io/state
   "tracker_delay_seconds": 0
 }
 ```
+
+## wallet
+
+Information about the users stardust
+
+### Endpoint
+
+`GET /api/wallet`
+
+### Query Parameters
+
+| Name  |  Type  | Description                                         | Required |
+| :---- | :----: | :-------------------------------------------------- | :------: |
+| user  | string | Steem user                                          |   :white_check_mark:    |
+
+### Types
+
+N/A
+
+### Examples
+
+```bash
+curl https://api.nextcolony.io/wallet?user=holger80
+```
+
+```json
+{
+"date": 1555878927,
+"incoming": [
+{
+"amount": 100000000000,
+"block_num": null,
+"date": 1563655053,
+"from_user": null,
+"id": 2,
+"to_user": "holger80",
+"tr_status": 1,
+"tr_type": "buy",
+"trx": "85b6b8d3d30f063d43839b94ef61bb88bf25f3f1"
+}
+],
+"outgoing": [
+{
+"amount": 1,
+"block_num": null,
+"date": 1563654762,
+"from_user": "holger80",
+"id": 1,
+"to_user": "oliverschmid",
+"tr_status": 1,
+"tr_type": "transfer",
+"trx": "be0524e86ffaa5866d366870747e5439c0303a1d"
+}
+],
+"stardust": 100277000000,
+"supply": 114989000000,
+"username": "holger80"
+}
+```
