@@ -528,3 +528,25 @@ Issues items into the game. This command will only be accepted from nextcolony o
 ### Item Names
 
 `blueprint_01, blueprint_02, blueprint_03, blueprint_04, blueprint_05, blueprint_06, blueprint_07, blueprint_08, blueprint_09, blueprint_10, booster_01, booster_02, booster_03, chest_01, chest_02, chest_03`
+
+## newseason
+
+Creating a new season. This command will only be accepted from nextcolony or admin users.
+
+```json
+ {
+   "username": "nextcolony",
+   "type": "newseason",
+   "command": {
+     "tr_var1": "A strong beginning!",
+     "tr_var2": "14",
+     "tr_var3": "3000"
+    }
+  }
+```
+
+| Field     | Description                        |
+| --------- | ---------------------------------- |
+| `tr_var1` | Season Name                        |
+| `tr_var2` | Length of season in days           |
+| `tr_var3` | Steem Rewards at the end of season |
