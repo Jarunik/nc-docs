@@ -1346,3 +1346,29 @@ curl https://api.nextcolony.io/wallet_ranking_
 }
 ]
 ```
+
+## currentseason
+
+Information about the currently active season.
+
+### Endpoint
+
+`GET /api/currentseason`
+
+### Query Parameters
+
+N/A
+
+### Types
+
+N/A
+
+### Examples
+
+```bash
+curl https://api.nextcolony.io/currentseason
+```
+
+```json
+{}
+```
