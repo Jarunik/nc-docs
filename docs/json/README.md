@@ -97,7 +97,7 @@ Skill names are:
 
 ### Ships
 
-`Explorer, Transporter, Corvette, Frigate, Destroyer, Cruiser, Battlecruiser, Carrier, Dreadnought`
+`Explorer, Transporter, Corvette, Frigate, Destroyer, Cruiser, Battlecruiser, Carrier, Dreadnought, Scout, Patrol, Cutter`
 
 ### Commander
 
@@ -147,7 +147,7 @@ Builds a ship in the shipyard if the shipyard and skill level allow it.
 
 ### Ship Names
 
-`explorership, explorership1, transportship, corvette, frigate, destroyer, cruiser, battlecruiser, carrier, dreadnought, corvette1, frigate1, destroyer1, cruiser1, battlecruiser1, carrier1, dreadnought1, corvette2, frigate2, destroyer2, cruiser2, battlecruiser2, carrier2, dreadnought2,transportship1,transportship2`
+`explorership, explorership1, transportship, corvette, frigate, destroyer, cruiser, battlecruiser, carrier, dreadnought, corvette1, frigate1, destroyer1, cruiser1, battlecruiser1, carrier1, dreadnought1, corvette2, frigate2, destroyer2, cruiser2, battlecruiser2, carrier2, dreadnought2,transportship1,transportship2, scout, scout1, scout2, patrol, patrol1, patrol2, cutter, cutter1, cutter2`
 
 ## explorespace
 

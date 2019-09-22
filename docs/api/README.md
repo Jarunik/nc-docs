@@ -883,6 +883,7 @@ curl https://api.nextcolony.io/loadfleetmission?user=holger80&active=1&planetid=
       "dreadnought": { "n": 1, "pos": 3 },
       "total": 3
     },
+    "start_date": 1568764443,
     "start_x": -156,
     "start_y": -239,
     "to_planet": {
