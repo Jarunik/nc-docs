@@ -550,3 +550,29 @@ Creating a new season. This command will only be accepted from nextcolony or adm
 | `tr_var1` | Season Name                        |
 | `tr_var2` | Length of season in days           |
 | `tr_var3` | Steem Rewards at the end of season |
+
+## upgradeyamato
+
+Upgrades a yamato ship to the next tier.
+
+```json
+{
+  "username": "jarunik",
+  "type": "upgradeyamato",
+  "command": {
+    "tr_var1": {
+      "yamato1": { "pos": 1, "n": 1 },
+    },
+    "tr_var2": 295,
+    "tr_var3": -211,
+    "tr_var2": "P-Z71I6RMOGWW"
+  }
+}
+```
+
+| Field     | Description                                                            |
+| --------- | ---------------------------------------------------------------------- |
+| `tr_var1` | List of ships, `n`: number of ships, `pos`: position of the ship `1-8` |
+| `tr_var2` | Horizontal Coordinates (X) of the upgrade planet                       |
+| `tr_var3` | Vertical Coordinates (Y)n of the upgrade planet                        |
+| `tr_var4` | Planet uid of origin/start                                             |
