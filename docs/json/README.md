@@ -534,16 +534,16 @@ Issues items into the game. This command will only be accepted from nextcolony o
 Creating a new season. This command will only be accepted from nextcolony or admin users.
 
 ```json
- {
-   "username": "nextcolony",
-   "type": "newseason",
-   "command": {
-     "tr_var1": "A strong beginning!",
-     "tr_var2": "14",
-     "tr_var3": "3000",
-     "tr_var4": "0.2"
-    }
+{
+  "username": "nextcolony",
+  "type": "newseason",
+  "command": {
+    "tr_var1": "A strong beginning!",
+    "tr_var2": "14",
+    "tr_var3": "3000",
+    "tr_var4": "0.2"
   }
+}
 ```
 
 | Field     | Description                              |
@@ -562,19 +562,11 @@ Upgrades a yamato ship to the next tier.
   "username": "jarunik",
   "type": "upgradeyamato",
   "command": {
-    "tr_var1": {
-      "yamato1": { "pos": 1, "n": 1 }
-    },
-    "tr_var2": 295,
-    "tr_var3": -211,
-    "tr_var2": "P-Z71I6RMOGWW"
+    "tr_var1": "S-Z0TZLSYZKR4"
   }
 }
 ```
 
-| Field     | Description                                                            |
-| --------- | ---------------------------------------------------------------------- |
-| `tr_var1` | List of ships, `n`: number of ships, `pos`: position of the ship `1-8` |
-| `tr_var2` | Horizontal Coordinates (X) of the upgrade planet                       |
-| `tr_var3` | Vertical Coordinates (Y) of the upgrade planet                         |
-| `tr_var4` | Planet uid of origin/start                                             |
+| Field     | Description        |
+| --------- | ------------------ |
+| `tr_var1` | Ship Id to upgrade |
