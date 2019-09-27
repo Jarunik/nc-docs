@@ -385,6 +385,7 @@ curl https://api.nextcolony.io/shipyard?id=P-Z8MVHPCCL80
       "coal": 576,
       "copper": 144,
       "ore": 288,
+      "stardust": 0,
       "time": 94254.40000000001,
       "uranium": 72
     },
