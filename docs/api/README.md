@@ -1374,3 +1374,48 @@ curl https://api.nextcolony.io/currentseason
 ```json
 {}
 ```
+
+## seasonranking
+
+Ranking of the Seasonal Reward Points
+
+### Endpoint
+
+`GET /api/seasonranking`
+
+### Query Parameters
+
+| Name  |  Type  | Description                        |      Required      |
+| :---- | :----: | :--------------------------------- | :----------------: |
+| season  | number | Season to display ranking for. Check current season for the id                        | :white_check_mark: |
+| sort  | string | You can sort by `total_rewar`, `build_reward`or `destroy_reward`                         | :x: |
+| limit | number | Number of ranks to show     |        :x:         |
+
+### Types
+
+N/A
+
+### Examples
+
+```bash
+curl https://api.nextcolony.io/seasonranking?season=1
+```
+
+```json
+[
+{
+"build_reward": 100,
+"destroy_reward": 1,
+"season_id": 1,
+"total_reward": 101,
+"user": "jarunik"
+},
+{
+"build_reward": 50,
+"destroy_reward": 5,
+"season_id": 1,
+"total_reward": 55,
+"user": "rondras"
+}
+]
+```
