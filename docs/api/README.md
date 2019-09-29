@@ -1336,26 +1336,26 @@ curl https://api.nextcolony.io/wallet_ranking_
 
 ```json
 [
-{
-"percentage": 87.0318030420301,
-"stardust": 100077000000,
-"user": "holger80"
-},
-{
-"percentage": 9.653966901181853,
-"stardust": 11101000000,
-"user": "rondras"
-}
+  {
+    "percentage": 87.0318030420301,
+    "stardust": 100077000000,
+    "user": "holger80"
+  },
+  {
+    "percentage": 9.653966901181853,
+    "stardust": 11101000000,
+    "user": "rondras"
+  }
 ]
 ```
 
-## currentseason
+## season
 
-Information about the currently active season.
+Information about the newest season.
 
 ### Endpoint
 
-`GET /api/currentseason`
+`GET /api/season`
 
 ### Query Parameters
 
@@ -1368,16 +1368,23 @@ N/A
 ### Examples
 
 ```bash
-curl https://api.nextcolony.io/currentseason
+curl https://api.nextcolony.io/season
 ```
 
 ```json
-{}
+{
+"end_date": 1565717424,
+"id": 1,
+"leach_rate": 0,
+"name": "A strong beginning!",
+"start_date": 1564507824,
+"steem_rewards": 3000
+}
 ```
 
 ## seasonranking
 
-Ranking of the Seasonal Reward Points
+Shows the newest Ranking of the Seasonal Reward Points
 
 ### Endpoint
 
@@ -1385,11 +1392,10 @@ Ranking of the Seasonal Reward Points
 
 ### Query Parameters
 
-| Name  |  Type  | Description                        |      Required      |
-| :---- | :----: | :--------------------------------- | :----------------: |
-| season  | number | Season to display ranking for. Check current season for the id                        | :white_check_mark: |
-| sort  | string | You can sort by `total_rewar`, `build_reward`or `destroy_reward`                         | :x: |
-| limit | number | Number of ranks to show     |        :x:         |
+| Name  |  Type  | Description                                                      | Required |
+| :---- | :----: | :--------------------------------------------------------------- | :------: |
+| sort  | string | You can sort by `total_reward`, `build_reward`or `destroy_reward` |   :x:    |
+| limit | number | Number of ranks to show                                          |   :x:    |
 
 ### Types
 
@@ -1398,24 +1404,32 @@ N/A
 ### Examples
 
 ```bash
-curl https://api.nextcolony.io/seasonranking?season=1
+curl https://api.nextcolony.io/seasonranking
 ```
 
 ```json
-[
 {
-"build_reward": 100,
-"destroy_reward": 1,
-"season_id": 1,
-"total_reward": 101,
-"user": "jarunik"
-},
-{
-"build_reward": 50,
-"destroy_reward": 5,
-"season_id": 1,
-"total_reward": 55,
-"user": "rondras"
+  "end_date": 1565717424,
+  "id": 1,
+  "leach_rate": 0,
+  "name": "A strong beginning!",
+  "ranking": [
+    {
+      "build_reward": 100,
+      "destroy_reward": 1,
+      "season_id": 1,
+      "total_reward": 101,
+      "user": "jarunik"
+    },
+    {
+      "build_reward": 50,
+      "destroy_reward": 5,
+      "season_id": 1,
+      "total_reward": 55,
+      "user": "rondras"
+    }
+  ],
+  "start_date": 1564507824,
+  "steem_rewards": 3000
 }
-]
 ```
