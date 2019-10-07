@@ -541,17 +541,19 @@ Creating a new season. This command will only be accepted from nextcolony or adm
     "tr_var1": "A strong beginning!",
     "tr_var2": "14",
     "tr_var3": "3000",
-    "tr_var4": "0.2"
+    "tr_var4": "0.2",
+    "tr_var5": "0.2"
   }
 }
 ```
 
-| Field     | Description                              |
-| --------- | ---------------------------------------- |
-| `tr_var1` | Season Name                              |
-| `tr_var2` | Length of season in days                 |
-| `tr_var3` | Steem Rewards at the end of season       |
-| `tr_var4` | Percent of reward points per yamato kill |
+| Field     | Description                                             |
+| --------- | ------------------------------------------------------- |
+| `tr_var1` | Season Name                                             |
+| `tr_var2` | Length of season in days                                |
+| `tr_var3` | Steem Rewards at the end of season                      |
+| `tr_var4` | Percent of reward points per yamato kill                |
+| `tr_var5` | Percent of reward points transmission per yamato deploy |
 
 ## upgradeyamato
 
