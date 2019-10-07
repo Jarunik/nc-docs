@@ -1359,7 +1359,9 @@ Information about the newest season.
 
 ### Query Parameters
 
-N/A
+| Name      |  Type  | Description                                                       | Required |
+| :-------- | :----: | :---------------------------------------------------------------- | :------: |
+| timestamp | number | Get the season which was active during this date in seconds       |   :x:    |
 
 ### Types
 
@@ -1392,10 +1394,11 @@ Shows the newest Ranking of the Seasonal Reward Points
 
 ### Query Parameters
 
-| Name  |  Type  | Description                                                       | Required |
-| :---- | :----: | :---------------------------------------------------------------- | :------: |
-| sort  | string | You can sort by `total_reward`, `build_reward`or `destroy_reward` |   :x:    |
-| limit | number | Number of ranks to show                                           |   :x:    |
+| Name      |  Type  | Description                                                       | Required |
+| :-------- | :----: | :---------------------------------------------------------------- | :------: |
+| sort      | string | You can sort by `total_reward`, `build_reward`or `destroy_reward` |   :x:    |
+| limit     | number | Number of ranks to show                                           |   :x:    |
+| timestamp | number | Get the season which was active during this date in seconds       |   :x:    |
 
 ### Types
 
@@ -1461,18 +1464,18 @@ curl https://api.nextcolony.io/activateditems?user=jarunik&planetid=P-Z5CNNNZTL4
 
 ```json
 [
-{
-"activated_date": 1569091374,
-"blueprint": "scout1",
-"booster": null,
-"coal": null,
-"copper": null,
-"id": "blueprint_11",
-"imgid": "blueprint_11",
-"name": "Scout Athene",
-"ore": null,
-"uid": "BP11-ZPVVI1CX2DS",
-"uranium": null
-}
+  {
+    "activated_date": 1569091374,
+    "blueprint": "scout1",
+    "booster": null,
+    "coal": null,
+    "copper": null,
+    "id": "blueprint_11",
+    "imgid": "blueprint_11",
+    "name": "Scout Athene",
+    "ore": null,
+    "uid": "BP11-ZPVVI1CX2DS",
+    "uranium": null
+  }
 ]
 ```
