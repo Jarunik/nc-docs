@@ -1479,3 +1479,59 @@ curl https://api.nextcolony.io/activateditems?user=jarunik&planetid=P-Z5CNNNZTL4
   }
 ]
 ```
+
+http://140.82.34.132/api/missions?user=jarunik&mission_type=upgradeyamato&cords_hor=-154&cords_ver=-241
+
+## missions
+
+Get missions by different query parameters ordered by the the time the mission is busy until with newest first.
+
+### Endpoint
+
+`GET /api/missions`
+
+### Query Parameters
+
+| Name           |  Type  | Description                                  | Required |
+| :------------- | :----: | :------------------------------------------- | :------: |
+| user           | string | Steem user                                   |   :x:    |
+| mission_type   | string | Type of the mission                          |   :x:    |
+| limit          | number | Number of missions to show (default:100)     |   :x:    |
+| cords_hor      | number | Horizontal coordinates of origin planet      |   :x:    |
+| cords_ver      | number | Vertical coordinates of origin planet        |   :x:    |
+| cords_hor_dest | number | Horizontal coordinates of destination planet |   :x:    |
+| cords_ver_dest | number | Vertical coordinates of destination planet   |   :x:    |
+
+
+### Types
+
+N/A
+
+### Examples
+
+```bash
+curl http://api.nextcolony.io/missions?user=jarunik&mission_type=upgradeyamato&cords_hor=-154&cords_ver=-241
+```
+
+```json
+[
+{
+"busy_until": 1570812813,
+"busy_until_return": 1570881933,
+"cords_hor": -154,
+"cords_hor_dest": -154,
+"cords_ver": -241,
+"cords_ver_dest": -241,
+"date": 1570812813,
+"mission_id": "M-Z9ULX1WBEDC",
+"mission_type": "upgradeyamato",
+"qyt_coal": 0,
+"qyt_copper": 0,
+"qyt_ore": 0,
+"ships": {
+"yamato": 1
+},
+"user": "jarunik"
+}
+]
+```
