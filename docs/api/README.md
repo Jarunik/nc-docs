@@ -1515,6 +1515,7 @@ curl http://api.nextcolony.io/missions?user=jarunik&mission_type=upgradeyamato&c
 ```json
 [
 {
+"battles": 0,
 "busy_until": 1570812813,
 "busy_until_return": 1570881933,
 "cords_hor": -154,
