@@ -1480,7 +1480,6 @@ curl https://api.nextcolony.io/activateditems?user=jarunik&planetid=P-Z5CNNNZTL4
 ]
 ```
 
-http://140.82.34.132/api/missions?user=jarunik&mission_type=upgradeyamato&cords_hor=-154&cords_ver=-241
 
 ## missions
 
@@ -1525,6 +1524,10 @@ curl http://api.nextcolony.io/missions?user=jarunik&mission_type=upgradeyamato&c
 "date": 1570812813,
 "mission_id": "M-Z9ULX1WBEDC",
 "mission_type": "upgradeyamato",
+"result": null,
+"new_item_id": null,
+"new_planet_id": null,
+"new_stardust": null,
 "qyt_coal": 0,
 "qyt_copper": 0,
 "qyt_ore": 0,
