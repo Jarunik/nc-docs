@@ -593,3 +593,19 @@ The skills of the user are retained.
 | Field     | Description                                       |
 | --------- | ------------------------------------------------- |
 | `tr_var1` | Planet id of the planet that should be rewspawned |
+
+## burn
+
+Burn a planet to harvest stardust.
+
+```json
+{
+  "username": "jarunik",
+  "type": "burn",
+  "command": { "tr_var1": "P-Z5OOONZTL40" }
+}
+```
+
+| Field     | Description                                   |
+| --------- | --------------------------------------------- |
+| `tr_var1` | Planet id of the planet that should be burned |
