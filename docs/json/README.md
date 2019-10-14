@@ -574,3 +574,22 @@ Upgrades a yamato ship to the next tier.
 | --------- | -------------------------- |
 | `tr_var1` | Planet uid of origin/start |
 | `tr_var2` | Ship to Upgrade            |
+
+## respawn
+
+Gives up the starter planet and respawns it in a new place.
+The user will lose his start planet with all ships on it.
+The new planet will be a fresh one without building levels.
+The skills of the user are retained.
+
+```json
+{
+  "username": "jarunik",
+  "type": "respawn",
+  "command": { "tr_var1": "P-Z5OOONZTL40" }
+}
+```
+
+| Field     | Description                                       |
+| --------- | ------------------------------------------------- |
+| `tr_var1` | Planet id of the planet that should be rewspawned |
