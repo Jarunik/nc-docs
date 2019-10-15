@@ -1359,9 +1359,9 @@ Information about the newest season.
 
 ### Query Parameters
 
-| Name      |  Type  | Description                                                       | Required |
-| :-------- | :----: | :---------------------------------------------------------------- | :------: |
-| timestamp | number | Get the season which was active during this date in seconds       |   :x:    |
+| Name      |  Type  | Description                                                 | Required |
+| :-------- | :----: | :---------------------------------------------------------- | :------: |
+| timestamp | number | Get the season which was active during this date in seconds |   :x:    |
 
 ### Types
 
@@ -1480,7 +1480,6 @@ curl https://api.nextcolony.io/activateditems?user=jarunik&planetid=P-Z5CNNNZTL4
 ]
 ```
 
-
 ## missions
 
 Get missions by different query parameters ordered by the the time the mission is busy until with newest first.
@@ -1501,7 +1500,6 @@ Get missions by different query parameters ordered by the the time the mission i
 | cords_hor_dest | number | Horizontal coordinates of destination planet |   :x:    |
 | cords_ver_dest | number | Vertical coordinates of destination planet   |   :x:    |
 
-
 ### Types
 
 N/A
@@ -1514,28 +1512,73 @@ curl http://api.nextcolony.io/missions?user=jarunik&mission_type=upgradeyamato&c
 
 ```json
 [
-{
-"battles": 0,
-"busy_until": 1570812813,
-"busy_until_return": 1570881933,
-"cords_hor": -154,
-"cords_hor_dest": -154,
-"cords_ver": -241,
-"cords_ver_dest": -241,
-"date": 1570812813,
-"mission_id": "M-Z9ULX1WBEDC",
-"mission_type": "upgradeyamato",
-"result": null,
-"new_item_id": null,
-"new_planet_id": null,
-"new_stardust": null,
-"qyt_coal": 0,
-"qyt_copper": 0,
-"qyt_ore": 0,
-"ships": {
-"yamato": 1
-},
-"user": "jarunik"
-}
+  {
+    "battles": 0,
+    "busy_until": 1570812813,
+    "busy_until_return": 1570881933,
+    "cords_hor": -154,
+    "cords_hor_dest": -154,
+    "cords_ver": -241,
+    "cords_ver_dest": -241,
+    "date": 1570812813,
+    "mission_id": "M-Z9ULX1WBEDC",
+    "mission_type": "upgradeyamato",
+    "result": null,
+    "new_item_id": null,
+    "new_planet_id": null,
+    "new_stardust": null,
+    "qyt_coal": 0,
+    "qyt_copper": 0,
+    "qyt_ore": 0,
+    "ships": {
+      "yamato": 1
+    },
+    "user": "jarunik"
+  }
+]
+```
+
+## burnrates
+
+Planet Burn rates in startoshi for bonus and planet type
+
+### Endpoint
+
+`GET /api/burnrates`
+
+### Query Parameters
+
+N/A
+
+### Types
+
+bonus:
+
+- 4 Legendary
+- 3 Rare
+- 2 Uncommmon
+- 1 Common
+
+type:
+
+- 5 Uranium
+- 4 Copper
+- 3 Ore
+- 2 Coal
+- 1 Atmothere
+
+### Examples
+
+```bash
+curl http://api.nextcolony.io/burnrates
+```
+
+```json
+[
+  {
+    "bonus": "4",
+    "burnrate": 900000000000000,
+    "planet_type": "5"
+  }
 ]
 ```
