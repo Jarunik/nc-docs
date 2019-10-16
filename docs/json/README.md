@@ -619,13 +619,13 @@ Issues stardust into the game. This command will only be accepted from nextcolon
   "username": "nextcolony",
   "type": "issuestardust",
   "command": {
-    "tr_var1": 10000000000,
+    "tr_var1": 100,
     "tr_var2": "nextcolony"
   }
 }
 ```
 
-| Field     | Description                                        |
-| --------- | -------------------------------------------------- |
-| `tr_var1` | Amount of stardust in startoshi (1e8) to be issued |
-| `tr_var2` | Recipient of the issued stardust                   |
+| Field     | Description                      |
+| --------- | -------------------------------- |
+| `tr_var1` | Amount of stardust to be issued  |
+| `tr_var2` | Recipient of the issued stardust |
