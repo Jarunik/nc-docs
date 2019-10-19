@@ -1583,6 +1583,11 @@ curl http://api.nextcolony.io/burnrates
 ]
 ```
 
+## galaxyplanets
+
+Access to all planets for map displays.
+
+
 ### Endpoint
 
 `GET /api/galaxyplanets`
