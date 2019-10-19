@@ -1582,3 +1582,40 @@ curl http://api.nextcolony.io/burnrates
   }
 ]
 ```
+
+### Endpoint
+
+`GET /api/galaxyplanets`
+
+### Query Parameters
+
+| Name  |  Type  | Description                                     | Required |
+| :---- | :----: | :---------------------------------------------- | :------: |
+| after | string | Timestamp in seconds to only get latest updates |   :x:    |
+
+### Types
+
+N/A
+
+### Examples
+
+```bash
+curl http://api.nextcolony.io/galaxyplanets
+```
+
+```json
+[
+  {
+    "abandoned": 0,
+    "bonus": 1,
+    "id": "P-ZP1NCK3755S",
+    "name": "Theta",
+    "starter": 0,
+    "type": 1,
+    "update": 1571522143,
+    "user": "oliverschmid",
+    "x": -167,
+    "y": -232
+  }
+]
+```
