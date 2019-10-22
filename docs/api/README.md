@@ -841,7 +841,7 @@ Get all the fleets missions of a user.
 | planetid | string | UID of the planet                                        |        :x:         |
 | active   | number | 1 = show only active, 0 = filter out active              |        :x:         |
 | outgoing | number | 1 = show only outgoing, 0 = filter out outgoing          |        :x:         |
-| hold     | number | 1 = show only outgoing, 0 = filter out outgoing          |        :x:         |
+| hold     | number | 1 = show only hold, 0 = filter out hold                  |        :x:         |
 | onlyuser | number | 1 = show only the missions of the user (and no incoming) |        :x:         |
 | page     | number | Which page to fetch, starting at 0                       |        :x:         |
 | limit    | number | How much entries to fetch per page                       |        :x:         |
