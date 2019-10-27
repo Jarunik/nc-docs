@@ -1623,3 +1623,43 @@ curl http://api.nextcolony.io/galaxyplanets
   }
 ]
 ```
+
+## asks
+
+Get all sales listing ordered by price
+
+### Endpoint
+
+`GET /api/asks`
+
+### Query Parameters
+
+| Name |  Type  | Description                          | Required |
+| :--- | :----: | :----------------------------------- | :------: |
+| uid  | string | Fetch the listing of a specific item |   :x:    |
+
+### Types
+
+N/A
+
+### Examples
+
+```bash
+curl http://api.nextcolony.io/asks
+```
+
+```json
+[
+  {
+    "id": "A-ZR1NOK30493",
+    "category": "item",
+    "uid": "B1-Z6SP11ZX1M8",
+    "subcategory": "blueprint",
+    "type": "blueprint_01",
+    "price": 100000000000,
+    "fee": 10000000000,
+    "market": "jarunik",
+    "user": "rondras"
+  }
+]
+```
