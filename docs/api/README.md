@@ -1651,15 +1651,23 @@ curl http://api.nextcolony.io/asks
 ```json
 [
   {
-    "id": "A-ZR1NOK30493",
+    "buy_trx": null,
+    "cancel_trx": null,
     "category": "item",
-    "uid": "B1-Z6SP11ZX1M8",
-    "subcategory": "blueprint",
-    "type": "blueprint_01",
-    "price": 100000000000,
-    "fee": 10000000000,
+    "cords_hor": null,
+    "cords_ver": null,
+    "date": 1572197088,
+    "failed": null,
+    "fee_burn": 400000000,
+    "fee_market": 400000000,
+    "id": "A-Z40PBDTA2J4",
     "market": "jarunik",
-    "user": "rondras"
+    "price": 10000000000,
+    "sold": null,
+    "subcategory": "blueprint",
+    "type": "blueprint_13",
+    "uid": "BP13-ZAM4OT0HOCW",
+    "user": "jarunik"
   }
 ]
 ```
