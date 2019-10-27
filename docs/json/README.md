@@ -629,3 +629,63 @@ Issues stardust into the game. This command will only be accepted from nextcolon
 | --------- | -------------------------------- |
 | `tr_var1` | Amount of stardust to be issued  |
 | `tr_var2` | Recipient of the issued stardust |
+
+## ask
+
+Create a sell order asking to sell some goods
+
+```json
+{
+  "username": "jarunik",
+  "type": "ask",
+  "command": {
+    "tr_var1": "item",
+    "tr_var2": "B1-Z3F0IFXTW74",
+    "tr_var3": 1000,
+    "t_var4": "jarunik"
+  }
+}
+```
+
+| Field     | Description                                            |
+| --------- | ------------------------------------------------------ |
+| `tr_var1` | Category of the good to sell: `ship`, `item`, `planet` |
+| `tr_var2` | UID of the good to sell                                |
+| `tr_var3` | Price in stardust                                      |
+| `tr_var4` | Listing Market as a steem user id                      |
+
+## cancel_ask
+
+Cancel listing a good.
+
+```json
+{
+  "username": "jarunik",
+  "type": "ask",
+  "command": {
+    "tr_var1": "B1-Z3F0IFXTW74"
+  }
+}
+```
+
+| Field     | Description               |
+| --------- | ------------------------- |
+| `tr_var1` | UID of the good to cancel |
+
+## fill_ask
+
+Fill an ask from the order to buy the good
+
+```json
+{
+  "username": "jarunik",
+  "type": "fill_ask",
+  "command": {
+    "tr_var1": "B1-Z3F0IFXTW74"
+  }
+}
+```
+
+| Field     | Description            |
+| --------- | ---------------------- |
+| `tr_var1` | UID of the good to buy |
