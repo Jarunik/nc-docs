@@ -661,9 +661,9 @@ Cancel listing a good.
 ```json
 {
   "username": "jarunik",
-  "type": "ask",
+  "type": "cancel_ask",
   "command": {
-    "tr_var1": "B1-Z3F0IFXTW74"
+    "tr_var1": "A-53F0DKXT244"
   }
 }
 ```
@@ -681,7 +681,7 @@ Fill an ask from the order to buy the good
   "username": "jarunik",
   "type": "fill_ask",
   "command": {
-    "tr_var1": "B1-Z3F0IFXTW74"
+    "tr_var1": "A-53F0DKXT244"
   }
 }
 ```
