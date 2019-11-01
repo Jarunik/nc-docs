@@ -1671,3 +1671,35 @@ curl http://api.nextcolony.io/asks
   }
 ]
 ```
+
+## dailybattles
+
+Get info about top battles of the last 24 hours
+
+### Endpoint
+
+`GET /api/dailybattles`
+
+### Query Parameters
+
+N/A
+
+### Types
+
+N/A
+
+### Examples
+
+```bash
+curl http://api.nextcolony.io/dailybattles
+```
+
+```json
+{
+"loot_attacker": "platuro",
+"loot_date": 1572535590,
+"loot_defender": "curbot",
+"loot_mission": "M-ZSHM0OIJOQO",
+"loot_points": 160.00799560546875
+}
+```
