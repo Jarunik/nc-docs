@@ -1696,10 +1696,44 @@ curl http://api.nextcolony.io/dailybattles
 
 ```json
 {
-"loot_attacker": "platuro",
-"loot_date": 1572535590,
-"loot_defender": "curbot",
-"loot_mission": "M-ZSHM0OIJOQO",
-"loot_points": 160.00799560546875
+  "loot_attacker": "platuro",
+  "loot_date": 1572535590,
+  "loot_defender": "curbot",
+  "loot_mission": "M-ZSHM0OIJOQO",
+  "loot_points": 160.00799560546875
+}
+```
+
+## missionoverview
+
+Key statistics about a users missions
+
+### Endpoint
+
+`GET /api/missionoverview`
+
+### Query Parameters
+
+| Name |  Type  | Description |      Required      |
+| :--- | :----: | :---------- | :----------------: |
+| user | string | Steem user  | :white_check_mark: |
+
+### Types
+
+N/A
+
+### Examples
+
+```bash
+curl http://api.nextcolony.io/missionoverview?user=jarunik
+```
+
+```json
+{
+  "free_missions": 22,
+  "friendly_missions": 0,
+  "hostile_missions": 0,
+  "max_missions": 22,
+  "own_missions": 0
 }
 ```
