@@ -1634,9 +1634,16 @@ Get all sales listing ordered by price
 
 ### Query Parameters
 
-| Name |  Type  | Description                          | Required |
-| :--- | :----: | :----------------------------------- | :------: |
-| uid  | string | Fetch the listing of a specific item |   :x:    |
+| Name        |  Type  | Description                                | Required |
+| :---------- | :----: | :----------------------------------------- | :------: |
+| id          | string | Get a specific listing by uid              |   :x:    |
+| uid         | string | Fetch the listing of a specific item       |   :x:    |
+| limit       | string | How many items to fetch                    |   :x:    |
+| user        | string | Listings of a user                         |   :x:    |
+| category    | string | Listings by category                       |   :x:    |
+| subcategory | string | Listings by subcategory                    |   :x:    |
+| type        | string | Listings by type                           |   :x:    |
+| active      |   1    | Filter out all closed listings. `active=1` |   :x:    |
 
 ### Types
 
