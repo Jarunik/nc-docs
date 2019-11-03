@@ -1644,6 +1644,7 @@ Get all sales listing ordered by price
 | subcategory | string | Listings by subcategory                    |   :x:    |
 | type        | string | Listings by type                           |   :x:    |
 | active      |   1    | Filter out all closed listings. `active=1` |   :x:    |
+| market      | string | Only get the listing of a specific market  |   :x:    |
 
 ### Types
 
