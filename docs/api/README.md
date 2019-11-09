@@ -346,6 +346,8 @@ curl https://api.nextcolony.io/loadcost?level=0&name=transportship&planetID=P-Z8
 
 ## shipyard
 
+Obsolete: Please use /planetshipyard instead.
+
 Check for available ships in the shipyard
 
 ### Endpoint
@@ -640,6 +642,8 @@ curl https://api.nextcolony.io/loadshop?user=holger80
 ```
 
 ## loadfleet
+
+Obsolete: Please use /planetfleet instead.
 
 Load all ships of a planet.
 
@@ -1923,6 +1927,68 @@ curl https://api.nextcolony.io/planetships?user=jarunik&planet=P-Z5CNNNZTL40
     "structure": 6,
     "type": "corvette",
     "variant": "rocket"
+  }
+]
+```
+
+## planetshipyard
+
+Get all data needed to build ships.
+
+### Endpoint
+
+`GET /api/planetshipyard`
+
+### Query Parameters
+
+| Name   |  Type  | Description             |      Required      |
+| :----- | :----: | :---------------------- | :----------------: |
+| user   | string | Steem user              | :white_check_mark: |
+| planet | string | UID of the planet       | :white_check_mark: |
+| name   | string | Filter to only one type |        :x:         |
+
+### Types
+
+N/A
+
+### Examples
+
+```bash
+curl https://api.nextcolony.io/planetshipyard?user=jarunik&planet=P-Z5CNNNZTL40
+```
+
+```json
+[
+  {
+    "activated": "true",
+    "armor": 20,
+    "blueprint": 0,
+    "bullet": 0,
+    "busy_until": null,
+    "capacity": 160,
+    "class": "Battlecruiser",
+    "consumption": 0.0038,
+    "costs": {
+      "coal": 576,
+      "copper": 144,
+      "ore": 288,
+      "stardust": null,
+      "time": 117818,
+      "uranium": 72
+    },
+    "laser": 0,
+    "longname": "Battlecruiser Tiger",
+    "rocket": 8,
+    "shield": 36,
+    "ship_skill": 20,
+    "shipyard_level": 17,
+    "shipyard_min_level": 18,
+    "shipyard_skill": 20,
+    "speed": 2,
+    "structure": 40,
+    "type": "battlecruiser",
+    "variant": 0,
+    "variant_name": "rocket"
   }
 ]
 ```
