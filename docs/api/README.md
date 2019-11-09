@@ -1745,3 +1745,184 @@ curl http://api.nextcolony.io/missionoverview?user=jarunik
   "own_missions": 0
 }
 ```
+
+## lowestasks
+
+Get all the lowest asks per unique price and date.
+
+### Endpoint
+
+`GET /api/lowestasks`
+
+### Query Parameters
+
+N/A
+
+### Types
+
+N/A
+
+### Examples
+
+```bash
+curl http://api.nextcolony.io/lowestasks
+```
+
+```json
+[
+  {
+    "buy_trx": null,
+    "cancel_trx": null,
+    "category": "ship",
+    "cords_hor": -260,
+    "cords_ver": -122,
+    "date": "Fri, 08 Nov 2019 12:48:00 GMT",
+    "failed": null,
+    "fee_burn": 97624000,
+    "fee_market": 97624000,
+    "id": "A-ZVGCKQ05BGG",
+    "market": "null",
+    "price": 2440600000,
+    "sold": null,
+    "subcategory": "Scout",
+    "type": "scout",
+    "uid": "S-ZCZ6P6LP1PC",
+    "user": "famigliacurione"
+  }
+]
+```
+
+## stardusttransfers
+
+Get all stardust transfers of a user.
+
+### Endpoint
+
+`GET /api/stardusttransfers`
+
+### Query Parameters
+
+| Name     |  Type  | Description                                 |      Required      |
+| :------- | :----: | :------------------------------------------ | :----------------: |
+| user     | string | Steem user                                  | :white_check_mark: |
+| after_id | string | Id of the transfer, use 0 to get everything | :white_check_mark: |
+
+### Types
+
+N/A
+
+### Examples
+
+```bash
+curl http://api.nextcolony.io/stardusttransfers?user=jarunik&after_id=0
+```
+
+```json
+[
+  {
+    "amount": 10,
+    "date": 1573215120,
+    "from_user": "nc-se-exchange",
+    "id": 31924,
+    "mission_id": null,
+    "to_user": "jarunik",
+    "tr_status": 1,
+    "tr_type": "transfer",
+    "trx": "8cf794d339931191301e2e510ebaacb9da18c282"
+  }
+]
+```
+
+## planetfleet
+
+Get available ships of a planet grouped by type.
+
+### Endpoint
+
+`GET /api/planetfleet`
+
+### Query Parameters
+
+| Name   |  Type  | Description       |      Required      |
+| :----- | :----: | :---------------- | :----------------: |
+| user   | string | Steem user        | :white_check_mark: |
+| planet | string | UID of the planet | :white_check_mark: |
+
+### Types
+
+N/A
+
+### Examples
+
+```bash
+curl https://api.nextcolony.io/planetfleet?user=jarunik&planet=P-Z5CNNNZTL40
+```
+
+```json
+[
+  {
+    "armor": 8,
+    "bullet": 0,
+    "capacity": 20,
+    "class": "Corvette",
+    "consumption": 0.001,
+    "for_sale": 0,
+    "laser": 0,
+    "longname": "Corvette Crocus",
+    "quantity": 4,
+    "rocket": 2,
+    "shipyard_level": 14,
+    "speed": 4,
+    "structure": 6,
+    "type": "corvette",
+    "variant": "rocket"
+  }
+]
+```
+
+## planetships
+
+Get available ships of a planet without grouping.
+
+### Endpoint
+
+`GET /api/planetships`
+
+### Query Parameters
+
+| Name   |  Type  | Description       |      Required      |
+| :----- | :----: | :---------------- | :----------------: |
+| user   | string | Steem user        | :white_check_mark: |
+| planet | string | UID of the planet | :white_check_mark: |
+
+### Types
+
+N/A
+
+### Examples
+
+```bash
+curl https://api.nextcolony.io/planetships?user=jarunik&planet=P-Z5CNNNZTL40
+```
+
+```json
+[
+  {
+    "armor": 8,
+    "bullet": 0,
+    "capacity": 20,
+    "class": "Corvette",
+    "consumption": 0.001,
+    "for_sale": 0,
+    "id": "S-ZG93DFF2VOG",
+    "laser": 0,
+    "longname": "Corvette Crocus",
+    "rocket": 2,
+    "shipyard_level": 14,
+    "speed": 4,
+    "structure": 6,
+    "type": "corvette",
+    "variant": "rocket"
+  }
+]
+```
