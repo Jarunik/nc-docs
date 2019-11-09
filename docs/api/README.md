@@ -1960,7 +1960,7 @@ curl https://api.nextcolony.io/planetshipyard?user=jarunik&planet=P-Z5CNNNZTL40
 ```json
 [
   {
-    "activated": "true",
+    "activated": true,
     "armor": 20,
     "blueprint": 0,
     "bullet": 0,
