@@ -1992,3 +1992,40 @@ curl https://api.nextcolony.io/planetshipyard?user=jarunik&planet=P-Z5CNNNZTL40
   }
 ]
 ```
+
+## missioninfo
+
+Get information about available missions.
+
+### Endpoint
+
+`GET /api/missioninfo`
+
+### Query Parameters
+
+| Name   |  Type  | Description       |      Required      |
+| :----- | :----: | :---------------- | :----------------: |
+| user   | string | Steem user        | :white_check_mark: |
+| planet | string | UID of the planet | :white_check_mark: |
+
+### Types
+
+N/A
+
+### Examples
+
+```bash
+curl https://api.nextcolony.io/missioninfo?user=jarunik&planet=P-Z5CNNNZTL40
+```
+
+```json
+{
+  "mission_allowed": true,
+  "planet_active": 1,
+  "planet_max": 7,
+  "planet_unused": 6,
+  "user_active": 28,
+  "user_max": 30,
+  "user_unused": 2
+}
+```
