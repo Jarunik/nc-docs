@@ -689,3 +689,25 @@ Fill an ask from the order to buy the good
 | Field     | Description            |
 | --------- | ---------------------- |
 | `tr_var1` | UID of the good to buy |
+
+## buff
+
+Buff the user for advantages.
+
+```json
+{
+  "username": "jarunik",
+  "type": "buff",
+  "command": {
+    "tr_var1": "missioncontrol"
+  }
+}
+```
+
+| Field     | Description |
+| --------- | ----------- |
+| `tr_var1` | Buff name   |
+
+### Buffs
+
+`missioncontrol`
