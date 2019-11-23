@@ -711,3 +711,23 @@ Buff the user for advantages.
 ### Buffs
 
 `missioncontrol`
+
+## updatebuff
+
+Update the price of a buff. This command is restricted to admin users.
+
+```json
+{
+  "username": "nextcolony",
+  "type": "updatebuff",
+  "command": {
+    "tr_var1": "missioncontrol",
+    "tr_var2": 10000
+  }
+}
+```
+
+| Field     | Description |
+| --------- | ----------- |
+| `tr_var1` | Buff name   |
+| `tr_var2` | Price       |
