@@ -710,7 +710,7 @@ Buff the user for advantages.
 
 ### Buffs
 
-`missioncontrol`
+`missioncontrol, battlespeed`
 
 ## updatebuff
 
