@@ -977,18 +977,22 @@ Get the registration date of a user. It can also be used to check existence of a
 
 ### Types
 
-| Field |              Description              |
-| :---- | :-----------------------------------: |
-| date  | Timestamp of registration in seconds. |
+| Field        |              Description                             |
+| :----        | :-----------------------------------:                |
+| date         | Timestamp of registration in seconds.                |
+| se_stardust  | Stardust balance on Steem Exchange (in Startoshi)    |
+| stardust     | Stardust balance ingame  (in Startoshi)              |
+| supply       | Total Stardust Supply  (in Startoshi)                |
+
 
 ### Examples
 
 ```bash
-curl https://api.nextcolony.io/loaduser?user=jarunik
+curl https://api.nextcolony.io/loaduser?user=oliverschmid
 ```
 
 ```json
-{ "date": 1555879062, "username": "jarunik" }
+{"date":1555879053,"se_stardust":10400200000,"stardust":700009190000000,"supply":1673096780600001,"username":"oliverschmid"}
 ```
 
 ## loadtransaction
