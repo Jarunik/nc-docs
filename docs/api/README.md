@@ -2042,7 +2042,7 @@ Get all stardust transfers of a user.
 
 | Name     |  Type  | Description                                 |      Required      |
 | :------- | :----: | :------------------------------------------ | :----------------: |
-| busy     | 1      | Yamatos in upgrade, not in upgrade or all   | :x               : |
+| busy     | 1      | Yamatos in upgrade, not in upgrade or all   | :x:                |
 
 ### Types
 
