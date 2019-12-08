@@ -2042,11 +2042,13 @@ Get all stardust transfers of a user.
 
 | Name     |  Type  | Description                                 |      Required      |
 | :------- | :----: | :------------------------------------------ | :----------------: |
-| busy     | 1      | Yamatos in upgrade, not in upgrade or all   | :white_check_mark: |
+| busy     | 1      | Yamatos in upgrade, not in upgrade or all   | :x               : |
 
 ### Types
 
-N/A
+0 = Show only Yamatos which are currently not performing an upgrade
+1 = Show only Yamatos which are currently performing an upgrade
+2 or anything else = Show all Yamatos
 
 ### Examples
 
@@ -2055,6 +2057,15 @@ curl http://api.nextcolony.io/yamatotracker?busy=0
 ```
 
 ```json
-[{"cords_hor":-156,"cords_ver":-239,"owner":"jarunik","type":"yamato","upgrade":0,"upgrade_until":1546300800},{"cords_hor":-165,"cords_ver":-233,"owner":"oliverschmid","type":"yamato","upgrade":0,"upgrade_until":1571827653},{"cords_hor":-167,"cords_ver":-232,"owner":"oliverschmid","type":"yamato","upgrade":0,"upgrade_until":1571639917},{"cords_hor":-157,"cords_ver":-238,"owner":"oliverschmid","type":"yamato1","upgrade":0,"upgrade_until":1574026830},{"cords_hor":-157,"cords_ver":-238,"owner":"oliverschmid","type":"yamato1","upgrade":0,"upgrade_until":1574587932},{"cords_hor":-157,"cords_ver":-238,"owner":"oliverschmid","type":"yamato","upgrade":0,"upgrade_until":1571579307},{"cords_hor":-157,"cords_ver":-238,"owner":"oliverschmid","type":"yamato","upgrade":0,"upgrade_until":1571579307},{"cords_hor":-157,"cords_ver":-238,"owner":"oliverschmid","type":"yamato","upgrade":0,"upgrade_until":1571579307},{"cords_hor":-156,"cords_ver":-239,"owner":"jarunik","type":"yamato","upgrade":0,"upgrade_until":1546300800}
+[
+{"cords_hor":-156,"cords_ver":-239,"owner":"jarunik","type":"yamato","upgrade":0,"upgrade_until":1546300800},
+{"cords_hor":-165,"cords_ver":-233,"owner":"oliverschmid","type":"yamato","upgrade":0,"upgrade_until":1571827653},
+{"cords_hor":-167,"cords_ver":-232,"owner":"oliverschmid","type":"yamato","upgrade":0,"upgrade_until":1571639917},
+{"cords_hor":-157,"cords_ver":-238,"owner":"oliverschmid","type":"yamato1","upgrade":0,"upgrade_until":1574026830},
+{"cords_hor":-157,"cords_ver":-238,"owner":"oliverschmid","type":"yamato1","upgrade":0,"upgrade_until":1574587932},
+{"cords_hor":-157,"cords_ver":-238,"owner":"oliverschmid","type":"yamato","upgrade":0,"upgrade_until":1571579307},
+{"cords_hor":-157,"cords_ver":-238,"owner":"oliverschmid","type":"yamato","upgrade":0,"upgrade_until":1571579307},
+{"cords_hor":-157,"cords_ver":-238,"owner":"oliverschmid","type":"yamato","upgrade":0,"upgrade_until":1571579307},
+{"cords_hor":-156,"cords_ver":-239,"owner":"jarunik","type":"yamato","upgrade":0,"upgrade_until":1546300800}
 ]
 ```
