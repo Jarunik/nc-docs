@@ -2029,3 +2029,28 @@ curl https://api.nextcolony.io/missioninfo?user=jarunik&planet=P-Z5CNNNZTL40
   "user_unused": 2
 }
 ```
+## marketstats
+
+Some statistics about the market.
+
+### Endpoint
+
+`GET /api/marketstates`
+
+### Query Parameters
+
+N/A
+
+### Types
+
+N/A
+
+### Examples
+
+```bash
+curl https://api.nextcolony.io/marketstats
+```
+
+```json
+{"highest_sale":{"category":"planet","price":25000000000000,"seller":"steembattle","type":"1"},"items_on_market":103,"planets_on_market":28,"ships_on_market":118,"total_burned":2952996400000,"trading_volume":54543955000000,"transaction_number":44}
+```
