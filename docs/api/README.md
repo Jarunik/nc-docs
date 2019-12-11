@@ -977,18 +977,22 @@ Get the registration date of a user. It can also be used to check existence of a
 
 ### Types
 
-| Field |              Description              |
-| :---- | :-----------------------------------: |
-| date  | Timestamp of registration in seconds. |
+| Field        |              Description                             |
+| :----        | :-----------------------------------:                |
+| date         | Timestamp of registration in seconds.                |
+| se_stardust  | Stardust balance on Steem Exchange (in Startoshi)    |
+| stardust     | Stardust balance ingame  (in Startoshi)              |
+| supply       | Total Stardust Supply  (in Startoshi)                |
+
 
 ### Examples
 
 ```bash
-curl https://api.nextcolony.io/loaduser?user=jarunik
+curl https://api.nextcolony.io/loaduser?user=oliverschmid
 ```
 
 ```json
-{ "date": 1555879062, "username": "jarunik" }
+{"date":1555879053,"se_stardust":10400200000,"stardust":700009190000000,"supply":1673096780600001,"username":"oliverschmid"}
 ```
 
 ## loadtransaction
@@ -2028,4 +2032,44 @@ curl https://api.nextcolony.io/missioninfo?user=jarunik&planet=P-Z5CNNNZTL40
   "user_max": 30,
   "user_unused": 2
 }
+```
+
+## yamatotracker
+
+Get all stardust transfers of a user.
+
+### Endpoint
+
+`GET /api/yamatotracker`
+
+### Query Parameters
+
+| Name     |  Type  | Description                                 |      Required      |
+| :------- | :----: | :------------------------------------------ | :----------------: |
+| busy     | 1      | Yamatos in upgrade, not in upgrade or all   | :x:                |
+
+### Types
+
+0 = Show only Yamatos which are currently not performing an upgrade
+1 = Show only Yamatos which are currently performing an upgrade
+2 or anything else = Show all Yamatos
+
+### Examples
+
+```bash
+curl http://api.nextcolony.io/yamatotracker?busy=0
+```
+
+```json
+[
+{"cords_hor":-156,"cords_ver":-239,"owner":"jarunik","type":"yamato","upgrade":0,"upgrade_until":1546300800},
+{"cords_hor":-165,"cords_ver":-233,"owner":"oliverschmid","type":"yamato","upgrade":0,"upgrade_until":1571827653},
+{"cords_hor":-167,"cords_ver":-232,"owner":"oliverschmid","type":"yamato","upgrade":0,"upgrade_until":1571639917},
+{"cords_hor":-157,"cords_ver":-238,"owner":"oliverschmid","type":"yamato1","upgrade":0,"upgrade_until":1574026830},
+{"cords_hor":-157,"cords_ver":-238,"owner":"oliverschmid","type":"yamato1","upgrade":0,"upgrade_until":1574587932},
+{"cords_hor":-157,"cords_ver":-238,"owner":"oliverschmid","type":"yamato","upgrade":0,"upgrade_until":1571579307},
+{"cords_hor":-157,"cords_ver":-238,"owner":"oliverschmid","type":"yamato","upgrade":0,"upgrade_until":1571579307},
+{"cords_hor":-157,"cords_ver":-238,"owner":"oliverschmid","type":"yamato","upgrade":0,"upgrade_until":1571579307},
+{"cords_hor":-156,"cords_ver":-239,"owner":"jarunik","type":"yamato","upgrade":0,"upgrade_until":1546300800}
+]
 ```
